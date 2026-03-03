@@ -119,16 +119,22 @@
     }
     .btn-primary:hover{ filter: brightness(1.03); }
 
-    /* Hero (übersichtlicher, nur 1 CTA) */
+    /* HERO (NEU: übersichtlich, Apple-dark, nur 1 CTA) */
     .hero{
-      padding: 46px 0 10px;
+      padding: 28px 0 10px;
     }
     .hero-card{
-      background: var(--panel);
+      background:
+        radial-gradient(900px 320px at 20% 10%, rgba(57,217,138,0.18), transparent 60%),
+        radial-gradient(700px 320px at 90% 40%, rgba(120,140,255,0.10), transparent 55%),
+        linear-gradient(180deg, rgba(0,0,0,0.55), rgba(0,0,0,0.62)),
+        url('header.jpg');
+      background-size: cover;
+      background-position: center;
       border: 1px solid var(--border);
       border-radius: var(--radius2);
       box-shadow: var(--shadow);
-      padding: 28px;
+      padding: 30px;
       position: relative;
       overflow: hidden;
     }
@@ -137,12 +143,44 @@
       position:absolute;
       inset:-2px;
       background:
-        radial-gradient(900px 320px at 20% 10%, rgba(57,217,138,0.18), transparent 60%),
-        radial-gradient(700px 320px at 90% 40%, rgba(120,140,255,0.10), transparent 55%);
-      opacity:.7;
+        radial-gradient(1200px 420px at 30% 0%, rgba(57,217,138,0.12), transparent 60%),
+        radial-gradient(900px 420px at 90% 40%, rgba(255,255,255,0.06), transparent 55%);
+      opacity:.9;
       pointer-events:none;
     }
     .hero-card > *{ position: relative; }
+
+    .hero-kicker{
+      display:flex;
+      align-items:center;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+    .hero-badge{
+      width: 42px;
+      height: 42px;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.10);
+      border: 1px solid rgba(255,255,255,0.18);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight: 900;
+      letter-spacing: .5px;
+    }
+    .hero-ktext strong{
+      display:block;
+      font-weight: 900;
+      letter-spacing: .4px;
+      line-height: 1.1;
+    }
+    .hero-ktext span{
+      display:block;
+      margin-top: 2px;
+      color: rgba(255,255,255,0.72);
+      font-weight: 700;
+      font-size: 12.5px;
+    }
 
     h1{
       margin: 0 0 10px;
@@ -151,7 +189,7 @@
       letter-spacing: -0.6px;
     }
     .lead{
-      color: var(--muted);
+      color: rgba(255,255,255,0.82);
       max-width: 68ch;
       margin: 0 0 18px;
       font-size: 15.5px;
@@ -525,10 +563,18 @@
   <!-- Header / Hero (clean) -->
   <div id="top" class="wrap hero">
     <div class="hero-card">
+      <div class="hero-kicker">
+        <div class="hero-badge">WR</div>
+        <div class="hero-ktext">
+          <strong>Westernrent</strong>
+          <span>Transporter mieten in Oberhausen · WhatsApp/Telefon</span>
+        </div>
+      </div>
+
       <h1>Transporter mieten – schnell & zuverlässig.</h1>
       <p class="lead">
-        Westernrent in Oberhausen: Maxus Deliver 9 (Diesel), 3,5t, L3H2.
-        Kurzzeit oder Langzeit – <b>Preis auf Anfrage</b>. Schreib uns per WhatsApp oder ruf kurz an.
+        Moderne <b>Maxus Deliver 9</b> für Gewerbe & Privat. Kurzzeit oder Langzeit – <b>Preis auf Anfrage</b>.
+        Klick auf „Zu den Fahrzeugen“ und such dir direkt den passenden Transporter aus.
       </p>
 
       <div class="hero-actions">
