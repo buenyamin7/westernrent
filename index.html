@@ -1,174 +1,796 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Westernrent | Transporter mieten in Oberhausen</title>
-<meta name="description" content="Westernrent Transporter-Vermietung in Oberhausen. 3x Maxus Deliver 9 (Diesel, 3,5t L3H2). Kurzzeit & Langzeit. Jetzt per WhatsApp anfragen.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Westernrent | 3,5t Transporter mieten (Maxus Deliver 9 L3H2) – Oberhausen</title>
+  <meta name="description" content="Westernrent – Transporter-Vermietung in Oberhausen (betrieben durch westernprint GmbH). 3× Maxus Deliver 9 (Diesel, 3,5t, L3H2). Kurzzeit & Langzeit. Preis auf Anfrage. WhatsApp/Telefon." />
+  <meta name="theme-color" content="#0b0f14" />
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
-<style>
-body{
-  font-family:'Inter',sans-serif;
-  margin:0;
-  background:#fff;
-  color:#111;
-}
+  <style>
+    :root{
+      --bg: #070a0f;
+      --panel: rgba(255,255,255,0.06);
+      --panel2: rgba(255,255,255,0.08);
+      --border: rgba(255,255,255,0.12);
+      --text: rgba(255,255,255,0.92);
+      --muted: rgba(255,255,255,0.68);
+      --muted2: rgba(255,255,255,0.52);
+      --accent: #39d98a;
+      --accent2: #2bb673;
+      --shadow: 0 20px 60px rgba(0,0,0,0.55);
+      --radius: 18px;
+      --radius2: 24px;
+      --max: 1120px;
+    }
 
-header{
-  background:#1b3022;
-  color:white;
-  padding:80px 20px;
-  text-align:center;
-}
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body{
+      margin:0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      background: radial-gradient(1200px 600px at 50% -10%, rgba(57,217,138,0.12), transparent 60%),
+                  radial-gradient(900px 500px at 20% 10%, rgba(120,140,255,0.08), transparent 55%),
+                  var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+    }
 
-header h1{
-  font-size:2.8rem;
-  margin-bottom:10px;
-}
+    a { color: inherit; }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 18px; }
 
-header p{
-  max-width:700px;
-  margin:auto;
-  opacity:0.9;
-}
+    /* Topbar */
+    .topbar{
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      backdrop-filter: blur(14px);
+      background: rgba(7,10,15,0.68);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .topbar-inner{
+      display:flex; align-items:center; justify-content:space-between;
+      padding: 12px 0;
+      gap: 12px;
+    }
+    .brand{
+      display:flex; align-items:center; gap: 10px;
+      text-decoration:none;
+    }
+    .logo{
+      width: 38px; height: 38px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, rgba(57,217,138,0.22), rgba(255,255,255,0.06));
+      border: 1px solid rgba(255,255,255,0.14);
+      display:flex; align-items:center; justify-content:center;
+      font-weight: 900;
+      letter-spacing: .5px;
+    }
+    .brand strong{ font-weight: 900; letter-spacing: .4px; }
+    .brand small{ display:block; color: var(--muted2); font-weight: 600; font-size: 12px; margin-top: -2px; }
 
-.btn{
-  display:inline-block;
-  margin-top:20px;
-  padding:14px 22px;
-  background:#2d5a3f;
-  color:white;
-  text-decoration:none;
-  border-radius:8px;
-  font-weight:700;
-}
+    .nav{
+      display:flex; gap: 10px; align-items:center;
+    }
+    .nav a{
+      text-decoration:none;
+      color: var(--muted);
+      font-weight: 700;
+      font-size: 13px;
+      padding: 10px 10px;
+      border-radius: 12px;
+      border: 1px solid transparent;
+    }
+    .nav a:hover{
+      color: var(--text);
+      border-color: rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.04);
+    }
 
-.container{
-  max-width:1100px;
-  margin:60px auto;
-  padding:0 20px;
-}
+    .cta{
+      display:flex; gap: 10px; align-items:center;
+    }
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      padding: 10px 14px;
+      border-radius: 14px;
+      font-weight: 900;
+      font-size: 13px;
+      text-decoration:none;
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.04);
+      color: var(--text);
+      transition: transform .15s ease, background .2s ease, border-color .2s ease;
+      user-select:none;
+      white-space: nowrap;
+    }
+    .btn:active{ transform: translateY(1px); }
+    .btn:hover{ background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.18); }
+    .btn-primary{
+      background: linear-gradient(135deg, rgba(57,217,138,0.95), rgba(43,182,115,0.92));
+      color: #07110b;
+      border-color: rgba(57,217,138,0.35);
+      box-shadow: 0 16px 35px rgba(57,217,138,0.18);
+    }
+    .btn-primary:hover{ filter: brightness(1.03); }
 
-.section-title{
-  text-align:center;
-  font-size:1.8rem;
-  margin-bottom:40px;
-}
+    /* Hero */
+    .hero{
+      padding: 46px 0 26px;
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 16px;
+      align-items: stretch;
+    }
+    .card{
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: var(--radius2);
+      box-shadow: var(--shadow);
+    }
+    .hero-main{
+      padding: 28px;
+      overflow:hidden;
+      position: relative;
+    }
+    .hero-main:before{
+      content:"";
+      position:absolute;
+      inset:-2px;
+      background: radial-gradient(800px 300px at 20% 10%, rgba(57,217,138,0.20), transparent 60%),
+                  radial-gradient(700px 320px at 90% 40%, rgba(120,140,255,0.10), transparent 55%);
+      opacity:.65;
+      pointer-events:none;
+    }
+    .hero-main > *{ position: relative; }
+    .pill{
+      display:inline-flex; align-items:center; gap:8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.04);
+      color: var(--muted);
+      font-weight: 800;
+      font-size: 12px;
+      letter-spacing: .2px;
+    }
+    .pill b{ color: var(--text); }
 
-.fleet{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-  gap:20px;
-}
+    h1{
+      margin: 14px 0 10px;
+      font-size: clamp(28px, 4vw, 46px);
+      line-height: 1.06;
+      letter-spacing: -0.6px;
+    }
+    .lead{
+      color: var(--muted);
+      max-width: 56ch;
+      margin: 0 0 18px;
+      font-size: 15.5px;
+    }
+    .hero-actions{
+      display:flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 14px;
+    }
+    .bullets{
+      margin-top: 16px;
+      display:flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .chip{
+      font-size: 12px;
+      font-weight: 800;
+      color: rgba(255,255,255,0.86);
+      padding: 8px 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.12);
+    }
 
-.vehicle{
-  border:1px solid #eee;
-  border-radius:12px;
-  padding:20px;
-  box-shadow:0 8px 20px rgba(0,0,0,0.05);
-}
+    .hero-side{
+      padding: 18px;
+      display:flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .side-box{
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: var(--radius);
+      padding: 14px;
+    }
+    .side-title{
+      font-weight: 900;
+      font-size: 13px;
+      color: rgba(255,255,255,0.92);
+      margin: 0 0 6px;
+    }
+    .side-text{
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .kpis{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .kpi{
+      background: rgba(0,0,0,0.22);
+      border: 1px solid rgba(255,255,255,0.10);
+      border-radius: 16px;
+      padding: 12px;
+    }
+    .kpi strong{ display:block; font-size: 18px; letter-spacing: -0.4px; }
+    .kpi span{ display:block; color: var(--muted2); font-weight: 700; font-size: 12px; margin-top: 2px; }
 
-.vehicle h3{
-  margin-top:0;
-}
+    /* Sections */
+    section{ padding: 28px 0; }
+    .section-head{
+      display:flex;
+      align-items:flex-end;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+    .section-head h2{
+      margin:0;
+      font-size: 20px;
+      letter-spacing: -0.2px;
+    }
+    .section-head p{
+      margin:0;
+      color: var(--muted2);
+      font-size: 13px;
+      max-width: 60ch;
+      text-align: right;
+    }
 
-.vehicle ul{
-  padding-left:18px;
-  color:#555;
-}
+    /* Fleet */
+    .fleet{
+      display:grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .vehicle{
+      padding: 16px;
+      border-radius: var(--radius2);
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.12);
+      box-shadow: 0 18px 55px rgba(0,0,0,0.35);
+      overflow:hidden;
+      position: relative;
+    }
+    .vehicle:before{
+      content:"";
+      position:absolute;
+      inset:-1px;
+      background: radial-gradient(600px 260px at 10% 0%, rgba(57,217,138,0.14), transparent 55%);
+      opacity:.8;
+      pointer-events:none;
+    }
+    .vehicle > *{ position: relative; }
+    .v-top{
+      display:flex; align-items:center; justify-content:space-between; gap: 10px;
+      margin-bottom: 10px;
+    }
+    .v-title{
+      font-weight: 900;
+      letter-spacing: -0.2px;
+      margin: 0;
+      font-size: 15px;
+    }
+    .tag{
+      font-size: 11px;
+      font-weight: 900;
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: rgba(57,217,138,0.14);
+      border: 1px solid rgba(57,217,138,0.22);
+      color: rgba(255,255,255,0.90);
+      white-space: nowrap;
+    }
+    .v-specs{
+      display:flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 10px 0 12px;
+    }
+    .v-specs .chip{ background: rgba(255,255,255,0.04); }
+    .v-list{
+      margin: 0;
+      padding-left: 16px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .v-foot{
+      display:flex;
+      align-items:flex-end;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 14px;
+      padding-top: 12px;
+      border-top: 1px solid rgba(255,255,255,0.10);
+    }
+    .price{
+      font-weight: 900;
+      letter-spacing: -0.2px;
+      font-size: 14px;
+    }
+    .subprice{
+      color: var(--muted2);
+      font-size: 12px;
+      font-weight: 700;
+      margin-top: 2px;
+    }
 
-.contact{
-  background:#1b3022;
-  color:white;
-  padding:60px 20px;
-  text-align:center;
-}
+    /* Features */
+    .features{
+      display:grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .feature{
+      padding: 16px;
+      border-radius: var(--radius2);
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+    .feature h3{
+      margin: 0 0 6px;
+      font-size: 14px;
+      letter-spacing: -0.2px;
+    }
+    .feature p{
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
 
-.contact a{
-  color:white;
-  font-weight:700;
-  text-decoration:none;
-  display:block;
-  margin-top:10px;
-}
+    /* Contact */
+    .contact{
+      padding: 22px;
+      border-radius: var(--radius2);
+      background: linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.04));
+      border: 1px solid rgba(255,255,255,0.12);
+      box-shadow: var(--shadow);
+      display:grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 14px;
+    }
+    .contact h2{ margin: 0 0 8px; font-size: 20px; letter-spacing: -0.2px; }
+    .contact p{ margin: 0; color: var(--muted); font-size: 13.5px; }
+    .contact-actions{ display:flex; gap: 10px; flex-wrap: wrap; margin-top: 14px; }
 
-footer{
-  background:#111;
-  color:#aaa;
-  text-align:center;
-  padding:20px;
-  font-size:0.9rem;
-}
+    .info{
+      background: rgba(0,0,0,0.20);
+      border: 1px solid rgba(255,255,255,0.10);
+      border-radius: var(--radius2);
+      padding: 14px;
+    }
+    .info strong{ display:block; font-size: 13px; margin-bottom: 8px; }
+    .info .row{
+      display:flex; justify-content:space-between; gap: 12px;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      color: var(--muted);
+      font-size: 12.5px;
+    }
+    .info .row:last-child{ border-bottom: 0; }
+    .info .row b{ color: rgba(255,255,255,0.90); font-weight: 800; }
 
-footer a{
-  color:#aaa;
-  text-decoration:none;
-}
-</style>
+    /* FAQ */
+    .faq{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    details{
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: var(--radius2);
+      padding: 14px 14px;
+    }
+    summary{
+      cursor:pointer;
+      font-weight: 900;
+      font-size: 13.5px;
+      color: rgba(255,255,255,0.92);
+      list-style: none;
+    }
+    summary::-webkit-details-marker{ display:none; }
+    details p{
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* Footer */
+    footer{
+      padding: 22px 0 34px;
+      color: var(--muted2);
+      font-size: 12px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      margin-top: 18px;
+    }
+    .footer-row{
+      display:flex; justify-content:space-between; align-items:center; gap: 10px;
+      flex-wrap: wrap;
+    }
+    .footer-row a{
+      text-decoration:none;
+      color: var(--muted2);
+      font-weight: 800;
+      padding: 8px 10px;
+      border-radius: 12px;
+      border: 1px solid transparent;
+    }
+    .footer-row a:hover{
+      color: var(--text);
+      background: rgba(255,255,255,0.04);
+      border-color: rgba(255,255,255,0.10);
+    }
+
+    /* Floating WhatsApp */
+    .float{
+      position: fixed;
+      right: 16px;
+      bottom: 16px;
+      z-index: 60;
+      display:flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .float a{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding: 12px 14px;
+      border-radius: 16px;
+      font-weight: 900;
+      text-decoration:none;
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.06);
+      color: var(--text);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 18px 45px rgba(0,0,0,0.45);
+    }
+    .float a.primary{
+      background: linear-gradient(135deg, rgba(57,217,138,0.95), rgba(43,182,115,0.92));
+      color: #07110b;
+      border-color: rgba(57,217,138,0.35);
+    }
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .hero-grid{ grid-template-columns: 1fr; }
+      .fleet{ grid-template-columns: 1fr; }
+      .features{ grid-template-columns: 1fr; }
+      .contact{ grid-template-columns: 1fr; }
+      .faq{ grid-template-columns: 1fr; }
+      .section-head{ flex-direction: column; align-items:flex-start; }
+      .section-head p{ text-align:left; }
+      .nav{ display:none; } /* clean mobile */
+    }
+  </style>
 </head>
 
 <body>
+  <!-- Topbar -->
+  <div class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="#top">
+        <div class="logo">WR</div>
+        <div>
+          <strong>Westernrent</strong>
+          <small>betrieben durch westernprint GmbH</small>
+        </div>
+      </a>
 
-<header>
-  <h1>Westernrent</h1>
-  <p>Transporter-Vermietung in Oberhausen. 3x Maxus Deliver 9 (Diesel, 3,5t L3H2). Kurzzeit & Langzeit – schnell & unkompliziert.</p>
-  <a href="#kontakt" class="btn">Jetzt anfragen</a>
-</header>
+      <div class="nav">
+        <a href="#fuhrpark">Fuhrpark</a>
+        <a href="#vorteile">Vorteile</a>
+        <a href="#faq">FAQ</a>
+        <a href="#kontakt">Kontakt</a>
+      </div>
 
-<div class="container">
-  <h2 class="section-title">Fuhrpark</h2>
-
-  <div class="fleet">
-
-    <div class="vehicle">
-      <h3>Maxus Deliver 9 #1</h3>
-      <ul>
-        <li>Diesel</li>
-        <li>3,5 Tonnen</li>
-        <li>L3H2</li>
-        <li>Kurzzeit & Langzeit möglich</li>
-      </ul>
-      <strong>Preis auf Anfrage</strong>
+      <div class="cta">
+        <a class="btn" href="tel:+4917655412198">📞 0176 55412198</a>
+        <a class="btn btn-primary" target="_blank" rel="noopener"
+           href="https://wa.me/4917655412198?text=Hallo%20Westernrent%2C%20ich%20m%C3%B6chte%20einen%20Transporter%20mieten%20(Maxus%20Deliver%209%2C%203%2C5t%2C%20L3H2).%0A%0AZeitraum%3A%20...%0AEinsatzort%3A%20...%0AKurzzeit%20oder%20Langzeit%3A%20...%0A%0AVielen%20Dank!">
+          💬 WhatsApp
+        </a>
+      </div>
     </div>
-
-    <div class="vehicle">
-      <h3>Maxus Deliver 9 #2</h3>
-      <ul>
-        <li>Diesel</li>
-        <li>3,5 Tonnen</li>
-        <li>L3H2</li>
-        <li>Kurzzeit & Langzeit möglich</li>
-      </ul>
-      <strong>Preis auf Anfrage</strong>
-    </div>
-
-    <div class="vehicle">
-      <h3>Maxus Deliver 9 #3</h3>
-      <ul>
-        <li>Diesel</li>
-        <li>3,5 Tonnen</li>
-        <li>L3H2</li>
-        <li>Kurzzeit & Langzeit möglich</li>
-      </ul>
-      <strong>Preis auf Anfrage</strong>
-    </div>
-
   </div>
-</div>
 
-<div class="contact" id="kontakt">
-  <h2>Kontakt</h2>
-  <p>Schenkendorfstraße 45<br>46047 Oberhausen</p>
-  <a href="tel:+4917655412198">📞 0176 55412198</a>
-  <a href="https://wa.me/4917655412198">💬 WhatsApp schreiben</a>
-</div>
+  <div id="top" class="wrap hero">
+    <div class="hero-grid">
+      <div class="card hero-main">
+        <div class="pill">🚐 <b>3×</b> Maxus Deliver 9 · Diesel · <b>3,5t</b> · L3H2</div>
+        <h1>Transporter mieten – kraftvoll, sauber, direkt verfügbar.</h1>
+        <p class="lead">
+          Westernrent ist deine Transporter-Vermietung in Oberhausen. Ideal für Umzüge, Lieferfahrten, Handwerk oder kurzfristige Kapazität.
+          <b>Preis auf Anfrage</b> – wir antworten schnell per WhatsApp oder Telefon.
+        </p>
 
-<footer>
-  &copy; 2026 Westernrent |
-  <a href="impressum.html">Impressum</a>
-</footer>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#fuhrpark">Fuhrpark ansehen</a>
+          <a class="btn" href="#kontakt">Kontakt / Angebot</a>
+          <a class="btn" target="_blank" rel="noopener"
+             href="https://wa.me/4917655412198?text=Hallo%20Westernrent%2C%20ich%20m%C3%B6chte%20einen%20Transporter%20mieten%20(Maxus%20Deliver%209%2C%203%2C5t%2C%20L3H2).%0A%0AZeitraum%3A%20...%0AEinsatzort%3A%20...%0AKurzzeit%20oder%20Langzeit%3A%20...%0A%0AVielen%20Dank!">
+            WhatsApp öffnen
+          </a>
+        </div>
 
+        <div class="bullets" aria-label="Highlights">
+          <span class="chip">✅ Kurzzeit & Langzeit</span>
+          <span class="chip">✅ Standort: Oberhausen</span>
+          <span class="chip">✅ 3,5t (Führerschein B)</span>
+          <span class="chip">✅ Preis auf Anfrage</span>
+        </div>
+      </div>
+
+      <div class="card hero-side">
+        <div class="side-box">
+          <p class="side-title">Standort</p>
+          <p class="side-text">Schenkendorfstraße 45<br>46047 Oberhausen</p>
+          <div class="kpis">
+            <div class="kpi">
+              <strong>3</strong>
+              <span>Fahrzeuge</span>
+            </div>
+            <div class="kpi">
+              <strong>L3H2</strong>
+              <span>Maxi-Laderaum</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="side-box">
+          <p class="side-title">Betrieb</p>
+          <p class="side-text">Die Vermietung „Westernrent“ läuft über die <b>westernprint GmbH</b>.</p>
+        </div>
+
+        <div class="side-box">
+          <p class="side-title">Schnellanfrage</p>
+          <p class="side-text">Schreib: Zeitraum · Einsatzort · Kurz/Langzeit</p>
+          <div style="margin-top:10px; display:flex; gap:10px; flex-wrap:wrap;">
+            <a class="btn btn-primary" style="flex:1; min-width: 160px;" target="_blank" rel="noopener"
+               href="https://wa.me/4917655412198?text=Hallo%20Westernrent%2C%20ich%20m%C3%B6chte%20einen%20Transporter%20mieten.%0A%0AZeitraum%3A%20...%0AEinsatzort%3A%20...%0AKurzzeit%20oder%20Langzeit%3A%20...">
+              WhatsApp
+            </a>
+            <a class="btn" style="flex:1; min-width: 160px;" href="tel:+4917655412198">Anrufen</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fuhrpark -->
+  <section id="fuhrpark">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Fuhrpark</h2>
+        <p>3× identisch – Maxus Deliver 9 (Diesel) · 3,5t · L3H2 · Preis auf Anfrage</p>
+      </div>
+
+      <div class="fleet">
+        <!-- Fahrzeug 1 -->
+        <article class="vehicle">
+          <div class="v-top">
+            <h3 class="v-title">Maxus Deliver 9 #1</h3>
+            <span class="tag">Verfügbar · Anfrage</span>
+          </div>
+          <div class="v-specs">
+            <span class="chip">Diesel</span>
+            <span class="chip">3,5t</span>
+            <span class="chip">L3H2</span>
+            <span class="chip">Kurzzeit & Langzeit</span>
+          </div>
+          <ul class="v-list">
+            <li>Ideal für Umzug / Lieferung / Handwerk</li>
+            <li>Abholung/Übergabe nach Absprache (Oberhausen)</li>
+            <li>Preis auf Anfrage – schnelle Rückmeldung</li>
+          </ul>
+          <div class="v-foot">
+            <div>
+              <div class="price">Preis auf Anfrage</div>
+              <div class="subprice">Schreib uns Zeitraum + Einsatzort</div>
+            </div>
+            <a class="btn btn-primary" target="_blank" rel="noopener"
+               href="https://wa.me/4917655412198?text=Hallo%20Westernrent%2C%20ich%20m%C3%B6chte%20Maxus%20Deliver%209%20%231%20mieten.%0A%0AZeitraum%3A%20...%0AEinsatzort%3A%20...%0AKurzzeit%20oder%20Langzeit%3A%20...">
+              Anfragen
+            </a>
+          </div>
+        </article>
+
+        <!-- Fahrzeug 2 -->
+        <article class="vehicle">
+          <div class="v-top">
+            <h3 class="v-title">Maxus Deliver 9 #2</h3>
+            <span class="tag">Verfügbar · Anfrage</span>
+          </div>
+          <div class="v-specs">
+            <span class="chip">Diesel</span>
+            <span class="chip">3,5t</span>
+            <span class="chip">L3H2</span>
+            <span class="chip">Kurzzeit & Langzeit</span>
+          </div>
+          <ul class="v-list">
+            <li>Starkes Fuhrpark-Setup (3 identische Fahrzeuge)</li>
+            <li>Planbar für Teams & wiederkehrende Touren</li>
+            <li>Preis auf Anfrage – schnelle Rückmeldung</li>
+          </ul>
+          <div class="v-foot">
+            <div>
+              <div class="price">Preis auf Anfrage</div>
+              <div class="subprice">Schreib uns Zeitraum + Einsatzort</div>
+            </div>
+            <a class="btn btn-primary" target="_blank" rel="noopener"
+               href="https://wa.me/4917655412198?text=Hallo%20Westernrent%2C%20ich%20m%C3%B6chte%20Maxus%20Deliver%209%20%232%20mieten.%0A%0AZeitraum%3A%20...%0AEinsatzort%3A%20...%0AKurzzeit%20oder%20Langzeit%3A%20...">
+              Anfragen
+            </a>
+          </div>
+        </article>
+
+        <!-- Fahrzeug 3 -->
+        <article class="vehicle">
+          <div class="v-top">
+            <h3 class="v-title">Maxus Deliver 9 #3</h3>
+            <span class="tag">Verfügbar · Anfrage</span>
+          </div>
+          <div class="v-specs">
+            <span class="chip">Diesel</span>
+            <span class="chip">3,5t</span>
+            <span class="chip">L3H2</span>
+            <span class="chip">Kurzzeit & Langzeit</span>
+          </div>
+          <ul class="v-list">
+            <li>Kurze Wege in NRW – schneller Start</li>
+            <li>Top für kurzfristige Ausfälle & Peaks</li>
+            <li>Preis auf Anfrage – schnelle Rückmeldung</li>
+          </ul>
+          <div class="v-foot">
+            <div>
+              <div class="price">Preis auf Anfrage</div>
+              <div class="subprice">Schreib uns Zeitraum + Einsatzort</div>
+            </div>
+            <a class="btn btn-primary" target="_blank" rel="noopener"
+               href="https://wa.me/4917655412198?text=Hallo%20Westernrent%2C%20ich%20m%C3%B6chte%20Maxus%20Deliver%209%20%233%20mieten.%0A%0AZeitraum%3A%20...%0AEinsatzort%3A%20...%0AKurzzeit%20oder%20Langzeit%3A%20...">
+              Anfragen
+            </a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vorteile -->
+  <section id="vorteile">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Vorteile</h2>
+        <p>Clean, schnell, planbar – Fokus auf Abwicklung & Verfügbarkeit</p>
+      </div>
+
+      <div class="features">
+        <div class="feature">
+          <h3>Fuhrpark-Logik</h3>
+          <p>3 identische Transporter – ideal für wiederkehrende Touren, Teams und planbare Kapazitäten.</p>
+        </div>
+        <div class="feature">
+          <h3>Flexible Mietdauer</h3>
+          <p>Kurzzeit oder Langzeit – wir finden die passende Lösung. Preis auf Anfrage.</p>
+        </div>
+        <div class="feature">
+          <h3>Schneller Kontakt</h3>
+          <p>WhatsApp/Telefon – du bekommst fix eine Rückmeldung, ohne Formular-Hölle.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>FAQ</h2>
+        <p>Die häufigsten Fragen – kurz & klar</p>
+      </div>
+
+      <div class="faq">
+        <details>
+          <summary>Wie frage ich am schnellsten an?</summary>
+          <p>Am besten per WhatsApp: Zeitraum, Einsatzort, Kurzzeit/Langzeit. Dann bekommst du sofort ein Angebot.</p>
+        </details>
+        <details>
+          <summary>Welche Fahrzeuge sind verfügbar?</summary>
+          <p>3× Maxus Deliver 9 (Diesel), 3,5t, L3H2. Preis auf Anfrage.</p>
+        </details>
+        <details>
+          <summary>Wo findet die Übergabe statt?</summary>
+          <p>Nach Absprache an unserem Standort: Schenkendorfstraße 45, 46047 Oberhausen.</p>
+        </details>
+        <details>
+          <summary>Über welche Firma läuft Westernrent?</summary>
+          <p>Westernrent ist die Vermietungs-Marke und läuft über die westernprint GmbH.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kontakt -->
+  <section id="kontakt">
+    <div class="wrap">
+      <div class="contact">
+        <div>
+          <h2>Kontakt / Angebot</h2>
+          <p>
+            Schreib uns kurz: <b>Zeitraum</b>, <b>Einsatzort</b> und <b>Kurzzeit oder Langzeit</b>.
+            Wir melden uns schnell zurück. <br><br>
+            <span style="color:var(--muted2); font-weight:800;">Westernrent (betrieben durch westernprint GmbH)</span>
+          </p>
+
+          <div class="contact-actions">
+            <a class="btn btn-primary" target="_blank" rel="noopener"
+               href="https://wa.me/4917655412198?text=Hallo%20Westernrent%2C%20ich%20m%C3%B6chte%20einen%20Transporter%20mieten.%0A%0AZeitraum%3A%20...%0AEinsatzort%3A%20...%0AKurzzeit%20oder%20Langzeit%3A%20...">
+              💬 WhatsApp Anfrage
+            </a>
+            <a class="btn" href="tel:+4917655412198">📞 0176 55412198</a>
+            <a class="btn" target="_blank" rel="noopener"
+               href="https://www.google.com/maps?q=Schenkendorfstra%C3%9Fe%2045,%2046047%20Oberhausen">
+              📍 Google Maps
+            </a>
+          </div>
+        </div>
+
+        <div class="info">
+          <strong>Kontaktinfos</strong>
+          <div class="row"><span>Telefon / WhatsApp</span><b>0176 55412198</b></div>
+          <div class="row"><span>Standort</span><b>Oberhausen</b></div>
+          <div class="row"><span>Adresse</span><b>Schenkendorfstraße 45</b></div>
+          <div class="row"><span>PLZ</span><b>46047</b></div>
+          <div class="row"><span>Firma</span><b>westernprint GmbH</b></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <div class="footer-row">
+        <div>© <span id="y"></span> Westernrent · betrieben durch westernprint GmbH</div>
+        <div style="display:flex; gap:8px; flex-wrap:wrap;">
+          <a href="impressum.html">Impressum</a>
+          <a href="#kontakt">Kontakt</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating buttons -->
+  <div class="float" aria-label="Schnellkontakt">
+    <a class="primary" target="_blank" rel="noopener"
+       href="https://wa.me/4917655412198?text=Hallo%20Westernrent%2C%20ich%20m%C3%B6chte%20einen%20Transporter%20mieten.%0A%0AZeitraum%3A%20...%0AEinsatzort%3A%20...%0AKurzzeit%20oder%20Langzeit%3A%20...">
+      💬 WhatsApp
+    </a>
+    <a href="tel:+4917655412198">📞 Anrufen</a>
+  </div>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
