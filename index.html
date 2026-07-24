@@ -18,520 +18,411 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Westernrent | Transporter mieten in Oberhausen</title>
-  <meta name="description" content="Westernrent – Transporter-Vermietung in Oberhausen. Maxus Deliver 9 (Diesel, 3,5t, L3H2). Kurzzeit & Langzeit. Preis auf Anfrage. WhatsApp/Telefon." />
-  <meta name="theme-color" content="#0b0f14" />
+  <title>Transporter mieten in Oberhausen ab 75 €/Tag | westernrent</title>
+  <meta name="description" content="Transporter mieten in Oberhausen: Maxus Deliver 9 (3,5 t, L3H2) ab 75 € pro Tag inkl. 100 km. Stundenmiete ab 10 €/Std. Vollkasko inklusive, Führerschein Klasse B reicht. Jetzt per WhatsApp reservieren: 0177 1437576." />
+  <meta name="theme-color" content="#1f3557" />
+  <link rel="canonical" href="https://westernrent.de/" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <meta property="og:title" content="Transporter mieten in Oberhausen ab 75 €/Tag | westernrent" />
+  <meta property="og:description" content="Maxus Deliver 9 mit Hochdach, Vollkasko inklusive, 100 km frei. Reservierung per WhatsApp oder Anruf: 0177 1437576." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://westernrent.de/" />
+  <meta property="og:image" content="https://westernrent.de/header.jpg" />
+  <meta property="og:locale" content="de_DE" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "westernrent Transporter Vermietung",
+    "url": "https://westernrent.de",
+    "telephone": "+491771437576",
+    "image": "https://westernrent.de/header.jpg",
+    "priceRange": "€€",
+    "parentOrganization": { "@type": "Organization", "name": "westernprint GmbH" },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Schenkendorfstraße 45",
+      "postalCode": "46047",
+      "addressLocality": "Oberhausen",
+      "addressCountry": "DE"
+    },
+    "areaServed": ["Oberhausen", "Essen", "Duisburg", "Mülheim an der Ruhr", "Bottrop"],
+    "makesOffer": [
+      { "@type": "Offer", "name": "Tagesmiete Transporter Mo-Do", "price": "75", "priceCurrency": "EUR" },
+      { "@type": "Offer", "name": "Tagesmiete Transporter Fr-So", "price": "100", "priceCurrency": "EUR" }
+    ]
+  }
+  </script>
 
   <style>
+    /*
+      westernrent one-pager
+      Theme: light default, dark via prefers-color-scheme
+      Radius system: cards 16px, buttons pill, inputs n/a
+      Accent: brand navy. WhatsApp green only on WhatsApp actions (semantic brand color).
+    */
     :root{
-      --bg: #070a0f;
-      --panel: rgba(255,255,255,0.06);
-      --panel2: rgba(255,255,255,0.08);
-      --border: rgba(255,255,255,0.12);
-      --text: rgba(255,255,255,0.92);
-      --muted: rgba(255,255,255,0.68);
-      --muted2: rgba(255,255,255,0.52);
-      --accent: #39d98a;
-      --accent2: #2bb673;
-      --shadow: 0 20px 60px rgba(0,0,0,0.55);
-      --radius: 18px;
-      --radius2: 24px;
-      --max: 1120px;
+      --bg: #f6f7f9;
+      --surface: #ffffff;
+      --surface-2: #eef1f5;
+      --ink: #17202e;
+      --ink-soft: #4a5568;
+      --ink-faint: #5d6b80;
+      --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+      --line: #dde3ea;
+      --navy: #1f3557;
+      --navy-deep: #16263f;
+      --navy-tint: #e8edf5;
+      --on-navy: #f4f7fb;
+      --wa: #1faa53;
+      --wa-press: #188a44;
+      --shadow: 0 10px 30px rgba(23, 32, 46, 0.10);
+      --r-card: 16px;
+      --r-pill: 999px;
+      --max: 1080px;
+    }
+    @media (prefers-color-scheme: dark){
+      :root{
+        --bg: #0f1622;
+        --surface: #17202e;
+        --surface-2: #1d2937;
+        --ink: #eef2f7;
+        --ink-soft: #b7c2d0;
+        --ink-faint: #8c99aa;
+        --line: #2a3749;
+        --navy: #8db0dd;
+        --navy-deep: #101b2c;
+        --navy-tint: #1c2a3e;
+        --on-navy: #f4f7fb;
+        --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+      }
     }
 
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    *{ box-sizing: border-box; }
+    html{ scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce){
+      html{ scroll-behavior: auto; }
+      *, *::before, *::after{ transition: none !important; animation: none !important; }
+    }
     body{
-      margin:0;
-      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-      background:
-        radial-gradient(1200px 600px at 50% -10%, rgba(57,217,138,0.10), transparent 60%),
-        radial-gradient(900px 500px at 20% 10%, rgba(120,140,255,0.07), transparent 55%),
-        var(--bg);
-      color: var(--text);
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
       line-height: 1.55;
+      font-size: 16px;
     }
+    a{ color: inherit; }
+    img{ max-width: 100%; display: block; }
+    .wrap{ max-width: var(--max); margin: 0 auto; padding: 0 20px; }
 
-    a { color: inherit; }
-    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 18px; }
+    h1, h2, h3{ text-wrap: balance; }
+    p{ text-wrap: pretty; }
 
-    /* Topbar */
+    a:focus-visible, .btn:focus-visible, summary:focus-visible{
+      outline: 2px solid var(--navy);
+      outline-offset: 2px;
+      border-radius: 6px;
+    }
+    .btn:focus-visible{ border-radius: var(--r-pill); }
+
+    .icon{ width: 18px; height: 18px; flex: none; }
+
+    /* ===== Top bar ===== */
     .topbar{
-      position: sticky;
-      top: 0;
-      z-index: 40;
-      backdrop-filter: blur(14px);
-      background: rgba(7,10,15,0.68);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
+      position: sticky; top: 0; z-index: 50;
+      background: color-mix(in srgb, var(--bg) 88%, transparent);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
     }
     .topbar-inner{
-      display:flex; align-items:center; justify-content:space-between;
-      padding: 12px 0;
-      gap: 12px;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 12px; height: 64px;
     }
-    .brand{
-      display:flex; align-items:center; gap: 10px;
-      text-decoration:none;
+    .wordmark{
+      text-decoration: none; font-size: 20px; letter-spacing: -0.3px;
+      display: flex; align-items: baseline; white-space: nowrap;
     }
-    .logo{
-      width: 38px; height: 38px;
-      border-radius: 14px;
-      background: linear-gradient(135deg, rgba(57,217,138,0.22), rgba(255,255,255,0.06));
-      border: 1px solid rgba(255,255,255,0.14);
-      display:flex; align-items:center; justify-content:center;
-      font-weight: 900;
-      letter-spacing: .5px;
-    }
-    .brand strong{ font-weight: 900; letter-spacing: .4px; }
-    .brand small{ display:block; color: var(--muted2); font-weight: 600; font-size: 12px; margin-top: -2px; }
+    .wordmark em{ font-style: italic; font-weight: 800; color: var(--navy); }
+    .wordmark b{ font-weight: 800; }
+    .top-actions{ display: flex; gap: 10px; align-items: center; }
 
-    .nav{
-      display:flex; gap: 10px; align-items:center;
-    }
-    .nav a{
-      text-decoration:none;
-      color: var(--muted);
-      font-weight: 700;
-      font-size: 13px;
-      padding: 10px 10px;
-      border-radius: 12px;
-      border: 1px solid transparent;
-    }
-    .nav a:hover{
-      color: var(--text);
-      border-color: rgba(255,255,255,0.12);
-      background: rgba(255,255,255,0.04);
-    }
-
-    .cta{
-      display:flex; gap: 10px; align-items:center;
-    }
     .btn{
-      display:inline-flex; align-items:center; justify-content:center; gap:10px;
-      padding: 10px 14px;
-      border-radius: 14px;
-      font-weight: 900;
-      font-size: 13px;
-      text-decoration:none;
-      border: 1px solid rgba(255,255,255,0.14);
-      background: rgba(255,255,255,0.04);
-      color: var(--text);
-      transition: transform .15s ease, background .2s ease, border-color .2s ease, filter .2s ease;
-      user-select:none;
+      display: inline-flex; align-items: center; justify-content: center; gap: 9px;
+      padding: 11px 20px; border-radius: var(--r-pill);
+      font-weight: 700; font-size: 15px; text-decoration: none;
+      border: 1px solid var(--line); background: var(--surface); color: var(--ink);
+      transition: background-color .15s var(--ease-out), border-color .15s var(--ease-out),
+                  transform .16s var(--ease-out), filter .15s var(--ease-out);
       white-space: nowrap;
+      min-height: 44px;
+      -webkit-tap-highlight-color: transparent;
     }
-    .btn:active{ transform: translateY(1px); }
-    .btn:hover{ background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.18); }
-    .btn-primary{
-      background: linear-gradient(135deg, rgba(57,217,138,0.95), rgba(43,182,115,0.92));
-      color: #07110b;
-      border-color: rgba(57,217,138,0.35);
-      box-shadow: 0 16px 35px rgba(57,217,138,0.18);
+    .btn:active{ transform: scale(0.98); }
+    .btn-wa{
+      background: var(--wa); border-color: var(--wa); color: #ffffff;
     }
-    .btn-primary:hover{ filter: brightness(1.03); }
+    .btn-navy{
+      background: var(--navy); border-color: var(--navy); color: var(--on-navy);
+    }
+    @media (prefers-color-scheme: dark){
+      .btn-navy{ background: #2c4a75; border-color: #2c4a75; }
+    }
+    @media (hover: hover) and (pointer: fine){
+      .btn:hover{ border-color: var(--ink-faint); }
+      .btn-wa:hover{ background: var(--wa-press); border-color: var(--wa-press); }
+      .btn-navy:hover{ filter: brightness(1.08); }
+    }
+    .btn-lg{ padding: 14px 26px; font-size: 16px; }
 
-    /* HERO */
-    .hero{
-      padding: 28px 0 10px;
+    /* ===== Hero ===== */
+    .hero{ padding: 48px 0 26px; }
+    .hero-grid{
+      display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 36px; align-items: center;
     }
-    .hero-card{
-      background:
-        radial-gradient(900px 320px at 20% 10%, rgba(57,217,138,0.18), transparent 60%),
-        radial-gradient(700px 320px at 90% 40%, rgba(120,140,255,0.10), transparent 55%),
-        linear-gradient(180deg, rgba(0,0,0,0.55), rgba(0,0,0,0.62)),
-        url('header.jpg');
-      background-size: cover;
-      background-position: center;
-      border: 1px solid var(--border);
-      border-radius: var(--radius2);
-      box-shadow: var(--shadow);
-      padding: 30px;
-      position: relative;
-      overflow: hidden;
-    }
-    .hero-card:before{
-      content:"";
-      position:absolute;
-      inset:-2px;
-      background:
-        radial-gradient(1200px 420px at 30% 0%, rgba(57,217,138,0.12), transparent 60%),
-        radial-gradient(900px 420px at 90% 40%, rgba(255,255,255,0.06), transparent 55%);
-      opacity:.9;
-      pointer-events:none;
-    }
-    .hero-card > *{ position: relative; }
-
-    .hero-kicker{
-      display:flex;
-      align-items:center;
-      gap: 10px;
-      margin-bottom: 14px;
-    }
-    .hero-badge{
-      width: 42px;
-      height: 42px;
-      border-radius: 16px;
-      background: rgba(255,255,255,0.10);
-      border: 1px solid rgba(255,255,255,0.18);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      font-weight: 900;
-      letter-spacing: .5px;
-    }
-    .hero-ktext strong{
-      display:block;
-      font-weight: 900;
-      letter-spacing: .4px;
-      line-height: 1.1;
-    }
-    .hero-ktext span{
-      display:block;
-      margin-top: 2px;
-      color: rgba(255,255,255,0.72);
-      font-weight: 700;
-      font-size: 12.5px;
-    }
-
     h1{
-      margin: 0 0 10px;
-      font-size: clamp(28px, 4vw, 46px);
-      line-height: 1.06;
-      letter-spacing: -0.6px;
+      margin: 0 0 14px;
+      font-size: clamp(30px, 4.6vw, 46px);
+      line-height: 1.06; letter-spacing: -1px; font-weight: 800;
     }
-    .lead{
-      color: rgba(255,255,255,0.82);
-      max-width: 68ch;
-      margin: 0 0 18px;
-      font-size: 15.5px;
+    h1 .loc{ color: var(--navy); }
+    .hero-sub{
+      margin: 0 0 22px; color: var(--ink-soft); font-size: 17.5px; max-width: 46ch;
     }
-    .hero-actions{
-      display:flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      margin-top: 10px;
+    .hero-actions{ display: flex; gap: 12px; flex-wrap: wrap; }
+    .hero-note{
+      margin-top: 18px; display: flex; gap: 18px; flex-wrap: wrap;
+      color: var(--ink-faint); font-size: 13.5px; font-weight: 600;
     }
+    .hero-note span{ display: inline-flex; align-items: center; gap: 7px; }
+    .hero-note .icon{ width: 15px; height: 15px; color: var(--navy); }
 
-    section{ padding: 28px 0; }
-    .section-head{
-      display:flex;
-      align-items:flex-end;
-      justify-content: space-between;
-      gap: 12px;
-      margin-bottom: 14px;
-    }
-    .section-head h2{
-      margin:0;
-      font-size: 20px;
-      letter-spacing: -0.2px;
-    }
-    .section-head p{
-      margin:0;
-      color: var(--muted2);
-      font-size: 13px;
-      max-width: 60ch;
-      text-align: right;
-    }
-
-    .fleet{
-      display:grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 14px;
-    }
-    .vehicle{
-      padding: 16px;
-      border-radius: var(--radius2);
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.12);
-      box-shadow: 0 18px 55px rgba(0,0,0,0.35);
-      overflow:hidden;
-      position: relative;
-    }
-    .vehicle:before{
-      content:"";
-      position:absolute;
-      inset:-1px;
-      background: radial-gradient(600px 260px at 10% 0%, rgba(57,217,138,0.14), transparent 55%);
-      opacity:.8;
-      pointer-events:none;
-    }
-    .vehicle > *{ position: relative; }
-
-    .v-top{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap: 10px;
-      margin-bottom: 10px;
-    }
-    .v-title{
-      font-weight: 900;
-      letter-spacing: -0.2px;
-      margin: 0;
-      font-size: 15px;
-    }
-    .tag{
-      font-size: 11px;
-      font-weight: 900;
-      padding: 7px 10px;
-      border-radius: 999px;
-      background: rgba(57,217,138,0.14);
-      border: 1px solid rgba(57,217,138,0.22);
-      color: rgba(255,255,255,0.90);
-      white-space: nowrap;
-    }
-
-    .thumb{
-      width: 100%;
-      height: 150px;
-      border-radius: 18px;
-      border: 1px solid rgba(255,255,255,0.12);
-      background: rgba(0,0,0,0.22);
-      overflow:hidden;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      margin-bottom: 12px;
-      position: relative;
-    }
-    .thumb img{
-      width:100%;
-      height:100%;
-      object-fit: cover;
-      display:block;
-      opacity: 0.92;
-    }
-    .thumb .placeholder{
-      color: rgba(255,255,255,0.60);
-      font-weight: 800;
-      font-size: 12px;
-      letter-spacing: .2px;
-      padding: 10px 12px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.12);
-      position:absolute;
-    }
-
-    .v-specs{
-      display:flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin: 10px 0 12px;
-    }
-    .chip{
-      font-size: 12px;
-      font-weight: 800;
-      color: rgba(255,255,255,0.86);
-      padding: 8px 10px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.12);
-    }
-
-    .v-foot{
-      display:flex;
-      align-items:flex-end;
-      justify-content: space-between;
-      gap: 12px;
-      margin-top: 14px;
-      padding-top: 12px;
-      border-top: 1px solid rgba(255,255,255,0.10);
-    }
-    .price{
-      font-weight: 900;
-      letter-spacing: -0.2px;
-      font-size: 14px;
-    }
-    .subprice{
-      color: var(--muted2);
-      font-size: 12px;
-      font-weight: 700;
-      margin-top: 2px;
-    }
-
-    details.v-details{
-      margin-top: 10px;
-      background: rgba(0,0,0,0.18);
-      border: 1px solid rgba(255,255,255,0.10);
-      border-radius: 16px;
-      padding: 10px 12px;
-    }
-    details.v-details summary{
-      cursor:pointer;
-      font-weight: 900;
-      font-size: 13px;
-      color: rgba(255,255,255,0.92);
-      list-style: none;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap: 10px;
-    }
-    details.v-details summary::-webkit-details-marker{ display:none; }
-    details.v-details summary .mut{
-      color: var(--muted2);
-      font-size: 12px;
-      font-weight: 800;
-    }
-    details.v-details .inner{
-      margin-top: 10px;
-      color: var(--muted);
-      font-size: 13px;
-      line-height: 1.55;
-    }
-    details.v-details ul{
-      margin: 8px 0 0;
-      padding-left: 18px;
-    }
-    details.v-details li{ margin: 6px 0; }
-
-    .features{
-      display:grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 14px;
-    }
-    .feature{
-      padding: 16px;
-      border-radius: var(--radius2);
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.12);
-    }
-    .feature h3{
-      margin: 0 0 6px;
-      font-size: 14px;
-      letter-spacing: -0.2px;
-    }
-    .feature p{
-      margin: 0;
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    .faq{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px;
-    }
-    details.faq-item{
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: var(--radius2);
-      padding: 14px 14px;
-    }
-    details.faq-item summary{
-      cursor:pointer;
-      font-weight: 900;
-      font-size: 13.5px;
-      color: rgba(255,255,255,0.92);
-      list-style: none;
-    }
-    details.faq-item summary::-webkit-details-marker{ display:none; }
-    details.faq-item p{
-      margin: 10px 0 0;
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    .contact{
-      padding: 22px;
-      border-radius: var(--radius2);
-      background: linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.04));
-      border: 1px solid rgba(255,255,255,0.12);
+    .hero-media{
+      border-radius: var(--r-card); overflow: hidden;
       box-shadow: var(--shadow);
-      display:grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 14px;
+      background: var(--surface-2);
+      aspect-ratio: 4 / 3;
     }
-    .contact h2{ margin: 0 0 8px; font-size: 20px; letter-spacing: -0.2px; }
-    .contact p{ margin: 0; color: var(--muted); font-size: 13.5px; }
-    .contact-actions{ display:flex; gap: 10px; flex-wrap: wrap; margin-top: 14px; }
+    .hero-media img{ width: 100%; height: 100%; object-fit: cover; }
 
-    .info{
-      background: rgba(0,0,0,0.20);
-      border: 1px solid rgba(255,255,255,0.10);
-      border-radius: var(--radius2);
-      padding: 14px;
+    /* Entry motion: hero fades up once on load, scroll-reveal nur wo unterstützt.
+       Beides kollabiert unter prefers-reduced-motion zur statischen Ansicht. */
+    @media (prefers-reduced-motion: no-preference){
+      .hero-grid > *{
+        opacity: 1; transform: none;
+        transition: opacity .55s var(--ease-out), transform .55s var(--ease-out);
+      }
+      .hero-grid > :nth-child(2){ transition-delay: .08s; }
+      @starting-style{
+        .hero-grid > *{ opacity: 0; transform: translateY(10px); }
+      }
+      @supports (animation-timeline: view()){
+        .price-card, .step, .trust-item, details.faq{
+          animation: rise-in both;
+          animation-timeline: view();
+          animation-range: entry 0% entry 55%;
+        }
+      }
     }
-    .info strong{ display:block; font-size: 13px; margin-bottom: 8px; }
-    .info .row{
-      display:flex; justify-content:space-between; gap: 12px;
-      padding: 8px 0;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-      color: var(--muted);
-      font-size: 12.5px;
+    @keyframes rise-in{
+      from{ opacity: 0; transform: translateY(14px); }
+      to{ opacity: 1; transform: none; }
     }
-    .info .row:last-child{ border-bottom: 0; }
-    .info .row b{ color: rgba(255,255,255,0.90); font-weight: 800; }
 
+    /* ===== Sections ===== */
+    section{ padding: 54px 0; }
+    .sec-head{ margin-bottom: 26px; max-width: 62ch; }
+    .sec-head h2{
+      margin: 0 0 8px; font-size: clamp(22px, 3vw, 30px);
+      letter-spacing: -0.5px; line-height: 1.15;
+    }
+    .sec-head p{ margin: 0; color: var(--ink-soft); font-size: 15.5px; }
+
+    /* ===== Pricing ===== */
+    .price-grid{
+      display: grid; grid-template-columns: 1.25fr 1fr; gap: 16px;
+    }
+    .price-col{ display: grid; gap: 16px; align-content: start; }
+    .price-card{
+      background: var(--surface); border: 1px solid var(--line);
+      border-radius: var(--r-card); padding: 24px;
+    }
+    .price-card.featured{
+      background: var(--navy-deep); color: var(--on-navy);
+      border-color: var(--navy-deep);
+      display: flex; flex-direction: column;
+    }
+    @media (prefers-color-scheme: light){
+      .price-card.featured{ box-shadow: var(--shadow); }
+    }
+    .price-card h3{ margin: 0 0 4px; font-size: 18px; letter-spacing: -0.2px; }
+    .price-card .p-sub{ font-size: 13.5px; margin: 0 0 18px; }
+    .price-card.featured .p-sub{ color: #aebdd2; }
+    .price-card:not(.featured) .p-sub{ color: var(--ink-faint); }
+
+    .p-rows{ display: grid; gap: 0; }
+    .p-row{
+      display: flex; justify-content: space-between; align-items: baseline; gap: 14px;
+      padding: 11px 0;
+    }
+    .p-row + .p-row{ border-top: 1px solid var(--line); }
+    .price-card.featured .p-row + .p-row{ border-top-color: #2c3f5c; }
+    .p-row .lbl{ font-size: 14.5px; }
+    .price-card.featured .p-row .lbl{ color: #cdd8e8; }
+    .price-card:not(.featured) .p-row .lbl{ color: var(--ink-soft); }
+    .p-row .val{ font-weight: 800; font-size: 17px; white-space: nowrap; }
+    .p-row .val small{ font-weight: 600; font-size: 12.5px; opacity: .75; }
+
+    .big-price{
+      display: flex; align-items: baseline; gap: 8px; margin: 4px 0 2px;
+    }
+    .big-price strong{ font-size: 44px; letter-spacing: -1.5px; line-height: 1; }
+    .big-price span{ font-size: 14px; color: #aebdd2; font-weight: 600; }
+
+    .p-incl{
+      margin: 16px 0 0; padding: 12px 14px; border-radius: 12px;
+      font-size: 13.5px; font-weight: 600;
+      background: rgba(255,255,255,0.07); color: #cdd8e8;
+    }
+    .price-card:not(.featured) .p-incl{
+      background: var(--navy-tint); color: var(--ink-soft);
+    }
+    .price-card.featured .cta-row{ margin-top: 20px; }
+
+    .km-note{
+      margin-top: 16px; padding: 16px 20px;
+      border-radius: var(--r-card);
+      background: var(--surface); border: 1px dashed var(--line);
+      display: flex; gap: 12px; align-items: flex-start;
+      color: var(--ink-soft); font-size: 14.5px;
+    }
+    .km-note .icon{ color: var(--navy); margin-top: 2px; }
+    .km-note b{ color: var(--ink); }
+
+    /* ===== Vehicle ===== */
+    .veh-grid{
+      display: grid; grid-template-columns: 0.95fr 1.05fr; gap: 36px; align-items: center;
+    }
+    .veh-media{
+      border-radius: var(--r-card); overflow: hidden; border: 1px solid var(--line);
+      background: var(--surface-2); aspect-ratio: 4 / 3;
+    }
+    .veh-media img{ width: 100%; height: 100%; object-fit: cover; }
+    .spec-chips{ display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 0; }
+    .chip{
+      font-size: 13px; font-weight: 700; padding: 8px 14px;
+      border-radius: var(--r-pill);
+      background: var(--surface); border: 1px solid var(--line); color: var(--ink-soft);
+    }
+    .veh-points{ margin: 18px 0 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+    .veh-points li{
+      display: flex; gap: 10px; align-items: flex-start;
+      color: var(--ink-soft); font-size: 15px;
+    }
+    .veh-points .icon{ color: var(--navy); margin-top: 3px; width: 16px; height: 16px; }
+    .veh-points b{ color: var(--ink); }
+
+    /* ===== Steps ===== */
+    .steps{
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 0;
+      background: var(--surface); border: 1px solid var(--line);
+      border-radius: var(--r-card); overflow: hidden;
+    }
+    .step{ padding: 26px 24px; }
+    .step + .step{ border-left: 1px solid var(--line); }
+    .step h3{ margin: 0 0 8px; font-size: 17px; display: flex; align-items: center; gap: 10px; }
+    .step h3 .icon{ color: var(--navy); width: 20px; height: 20px; }
+    .step p{ margin: 0; color: var(--ink-soft); font-size: 14.5px; }
+
+    /* ===== Trust ===== */
+    .trust-grid{
+      display: grid; grid-template-columns: 1fr 1fr; gap: 0 44px;
+    }
+    .trust-item{
+      display: flex; gap: 14px; padding: 18px 0;
+      border-top: 1px solid var(--line);
+    }
+    .trust-item .icon{ color: var(--navy); width: 22px; height: 22px; margin-top: 2px; }
+    .trust-item h3{ margin: 0 0 4px; font-size: 15.5px; }
+    .trust-item p{ margin: 0; color: var(--ink-soft); font-size: 14px; }
+
+    /* ===== FAQ ===== */
+    .faq-list{ display: grid; gap: 10px; max-width: 760px; }
+    details.faq{
+      background: var(--surface); border: 1px solid var(--line);
+      border-radius: var(--r-card); padding: 0 20px;
+    }
+    details.faq summary{
+      cursor: pointer; font-weight: 700; font-size: 15.5px;
+      padding: 17px 0; list-style: none;
+      display: flex; justify-content: space-between; align-items: center; gap: 12px;
+    }
+    details.faq summary::-webkit-details-marker{ display: none; }
+    details.faq summary::after{
+      content: "+"; font-size: 20px; font-weight: 600; color: var(--ink-faint);
+      transition: transform .15s ease;
+    }
+    details.faq[open] summary::after{ transform: rotate(45deg); }
+    details.faq p{ margin: 0; padding: 0 0 18px; color: var(--ink-soft); font-size: 14.5px; }
+
+    /* ===== Contact band ===== */
+    .contact-band{
+      background: var(--navy-deep); color: var(--on-navy);
+      border-radius: var(--r-card);
+      padding: 40px; text-align: center;
+    }
+    .contact-band h2{ margin: 0 0 8px; font-size: clamp(22px, 3vw, 30px); letter-spacing: -0.5px; }
+    .contact-band > p{ margin: 0 auto 24px; color: #aebdd2; max-width: 52ch; font-size: 15.5px; }
+    .contact-actions{ display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .contact-meta{
+      margin-top: 26px; padding-top: 22px; border-top: 1px solid #2c3f5c;
+      display: flex; gap: 10px 34px; justify-content: center; flex-wrap: wrap;
+      font-size: 14px; color: #cdd8e8;
+    }
+    .contact-meta a{ color: inherit; text-decoration: none; display: inline-flex; gap: 8px; align-items: center; }
+    .contact-meta a:hover{ text-decoration: underline; }
+    .contact-meta .icon{ width: 16px; height: 16px; }
+
+    /* ===== Footer ===== */
     footer{
-      padding: 22px 0 34px;
-      color: var(--muted2);
-      font-size: 12px;
-      border-top: 1px solid rgba(255,255,255,0.08);
-      margin-top: 18px;
+      padding: 30px 0 110px; color: var(--ink-faint); font-size: 13px;
     }
     .footer-row{
-      display:flex; justify-content:space-between; align-items:center; gap: 10px;
-      flex-wrap: wrap;
+      display: flex; justify-content: space-between; align-items: center;
+      gap: 12px; flex-wrap: wrap;
     }
-    .footer-row a{
-      text-decoration:none;
-      color: var(--muted2);
-      font-weight: 800;
-      padding: 8px 10px;
-      border-radius: 12px;
-      border: 1px solid transparent;
-    }
-    .footer-row a:hover{
-      color: var(--text);
-      background: rgba(255,255,255,0.04);
-      border-color: rgba(255,255,255,0.10);
+    .footer-row a{ color: var(--ink-soft); font-weight: 600; text-decoration: none; }
+    .footer-row a:hover{ text-decoration: underline; }
+    @media (min-width: 769px){
+      footer{ padding-bottom: 36px; }
     }
 
-    .float{
-      position: fixed;
-      right: 16px;
-      bottom: 16px;
-      z-index: 60;
-      display:flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-    .float a{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:10px;
-      padding: 12px 14px;
-      border-radius: 16px;
-      font-weight: 900;
-      text-decoration:none;
-      border: 1px solid rgba(255,255,255,0.14);
-      background: rgba(255,255,255,0.06);
-      color: var(--text);
+    /* ===== Mobile sticky action bar ===== */
+    .action-bar{
+      position: fixed; left: 0; right: 0; bottom: 0; z-index: 60;
+      display: none;
+      gap: 10px; padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
+      background: color-mix(in srgb, var(--bg) 92%, transparent);
       backdrop-filter: blur(10px);
-      box-shadow: 0 18px 45px rgba(0,0,0,0.45);
-      white-space: nowrap;
+      border-top: 1px solid var(--line);
     }
-    .float a.primary{
-      background: linear-gradient(135deg, rgba(57,217,138,0.95), rgba(43,182,115,0.92));
-      color: #07110b;
-      border-color: rgba(57,217,138,0.35);
-    }
+    .action-bar .btn{ flex: 1; padding: 13px 10px; }
 
-    @media (max-width: 980px){
-      .fleet{ grid-template-columns: 1fr; }
-      .features{ grid-template-columns: 1fr; }
-      .contact{ grid-template-columns: 1fr; }
-      .faq{ grid-template-columns: 1fr; }
-      .section-head{ flex-direction: column; align-items:flex-start; }
-      .section-head p{ text-align:left; }
-      .nav{ display:none; }
+    /* ===== Responsive ===== */
+    @media (max-width: 900px){
+      .hero-grid, .veh-grid{ grid-template-columns: 1fr; gap: 22px; }
+      .veh-grid .veh-media{ order: -1; }
+      .price-grid{ grid-template-columns: 1fr; }
+      .steps{ grid-template-columns: 1fr; }
+      .step + .step{ border-left: 0; border-top: 1px solid var(--line); }
+      .trust-grid{ grid-template-columns: 1fr; }
+    }
+    @media (max-width: 768px){
+      .top-actions .btn-call-top{ display: none; }
+      .action-bar{ display: flex; }
+      section{ padding: 42px 0; }
+      .contact-band{ padding: 30px 20px; }
     }
   </style>
 </head>
@@ -542,229 +433,211 @@
     src="https://www.facebook.com/tr?id=1452084713233930&ev=PageView&noscript=1"/>
   </noscript>
 
-  <!-- Topbar -->
+  <!-- SVG sprite -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.82 9.82 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.8 11.8 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.9 11.9 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.82 11.82 0 0 0-3.48-8.413"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path fill="currentColor" d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1.02z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.5l5 5 10-11"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7m0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path fill="currentColor" d="M12 1 3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5zm-1.5 15.5-3.5-3.5 1.41-1.41 2.09 2.08 5.09-5.08L17 10z"/></symbol>
+    <symbol id="i-video" viewBox="0 0 24 24"><path fill="currentColor" d="M17 10.5V7a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-3.5l4 4v-11z"/></symbol>
+    <symbol id="i-doc" viewBox="0 0 24 24"><path fill="currentColor" d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zm2 16H8v-2h8zm0-4H8v-2h8zm-3-5V3.5L18.5 9z"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="m12 17.27 6.18 3.73-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></symbol>
+    <symbol id="i-key" viewBox="0 0 24 24"><path fill="currentColor" d="M12.65 10A5.99 5.99 0 0 0 7 6c-3.31 0-6 2.69-6 6s2.69 6 6 6a5.99 5.99 0 0 0 5.65-4H17v4h4v-4h2v-4zM7 15c-1.65 0-3-1.35-3-3s1.35-3 3-3 3 1.35 3 3-1.35 3-3 3"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2m4.2 14.2L11 13.3V7h1.5v5.4l4.5 2.67z"/></symbol>
+  </svg>
+
+  <!-- Top bar -->
   <div class="topbar">
     <div class="wrap topbar-inner">
-      <a class="brand" href="#top">
-        <div class="logo">WR</div>
-        <div>
-          <strong>Westernrent</strong>
-          <small>Transporter-Vermietung · Oberhausen</small>
-        </div>
+      <a class="wordmark" href="#top" aria-label="westernrent Startseite">
+        <em>western</em><b>rent</b>
       </a>
-
-      <div class="nav">
-        <a href="#fuhrpark">Fuhrpark</a>
-        <a href="#vorteile">Vorteile</a>
-        <a href="#faq">FAQ</a>
-        <a href="#kontakt">Kontakt</a>
-      </div>
-
-      <div class="cta">
-        <a class="btn" href="tel:+4917655412198" onclick="fbq('track', 'Contact');">📞 0176 55412198</a>
-        <a class="btn btn-primary" target="_blank" rel="noopener"
-           onclick="fbq('track', 'Lead');"
-           href="https://wa.me/4917655412198?text=Hallo%20Westernrent%2C%20ich%20m%C3%B6chte%20einen%20Transporter%20mieten%20(Maxus%20Deliver%209%2C%203%2C5t%2C%20L3H2).%0A%0AZeitraum%3A%20...%0AEinsatzort%3A%20...%0AKurzzeit%20oder%20Langzeit%3A%20...%0A%0AVielen%20Dank!">
-          💬 WhatsApp
+      <div class="top-actions">
+        <a class="btn btn-call-top" href="tel:+491771437576" onclick="fbq('track','Contact');">
+          <svg class="icon"><use href="#i-phone"/></svg> 0177 1437576
+        </a>
+        <a class="btn btn-wa" target="_blank" rel="noopener"
+           onclick="fbq('track','Lead');"
+           href="https://wa.me/491771437576?text=Hallo%20westernrent%2C%20ich%20m%C3%B6chte%20einen%20Transporter%20mieten.%0A%0AZeitraum%3A%20...%0AAbholung%3A%20Oberhausen%0A%0ADanke!">
+          <svg class="icon"><use href="#i-wa"/></svg> WhatsApp
         </a>
       </div>
     </div>
   </div>
 
-  <!-- Header / Hero (clean) -->
-  <div id="top" class="wrap hero">
-    <div class="hero-card">
-      <div class="hero-kicker">
-        <div class="hero-badge">WR</div>
-        <div class="hero-ktext">
-          <strong>Westernrent</strong>
-          <span>Transporter mieten in Oberhausen · WhatsApp/Telefon</span>
+  <!-- Hero -->
+  <header id="top" class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <h1>Transporter mieten<br>in <span class="loc">Oberhausen</span>.</h1>
+        <p class="hero-sub">
+          Maxus Deliver 9 mit Hochdach, ab 75 € pro Tag inkl. 100 km.
+          Heute anfragen, morgen fahren.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-wa btn-lg" target="_blank" rel="noopener"
+             onclick="fbq('track','Lead');"
+             href="https://wa.me/491771437576?text=Hallo%20westernrent%2C%20ich%20m%C3%B6chte%20einen%20Transporter%20mieten.%0A%0AZeitraum%3A%20...%0AAbholung%3A%20Oberhausen%0A%0ADanke!">
+            <svg class="icon"><use href="#i-wa"/></svg> Jetzt reservieren
+          </a>
+          <a class="btn btn-lg" href="#preise">Preise ansehen</a>
+        </div>
+        <div class="hero-note">
+          <span><svg class="icon"><use href="#i-check"/></svg> Führerschein Klasse B reicht</span>
+          <span><svg class="icon"><use href="#i-check"/></svg> Vollkasko inklusive</span>
+        </div>
+      </div>
+      <div class="hero-media">
+        <img src="header.jpg" alt="Maxus Deliver 9 Transporter von westernrent in Oberhausen"
+             fetchpriority="high"
+             onerror="this.onerror=null;this.src='images/maxus1_thumb.png';">
+      </div>
+    </div>
+  </header>
+
+  <!-- Preise -->
+  <section id="preise">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Klare Preise. Keine Sternchen.</h2>
+        <p>Alle Preise inkl. 19 % MwSt. Kraftstoff nach Verbrauch, Kaution bei Abholung.</p>
+      </div>
+
+      <div class="price-grid">
+        <div class="price-card featured">
+          <h3>Tagesmiete</h3>
+          <p class="p-sub">24 Stunden, inkl. 100 km pro Miettag</p>
+          <div class="big-price"><strong>75 €</strong><span>pro Tag, Montag bis Donnerstag</span></div>
+          <div class="p-rows" style="margin-top:14px;">
+            <div class="p-row"><span class="lbl">Freitag bis Sonntag &amp; Feiertage</span><span class="val">100 € <small>/ Tag</small></span></div>
+          </div>
+          <div class="p-incl">Rückfahrkamera, Klima, 3 Sitzplätze, ca. 3,40 m Ladelänge, Stehhöhe im Laderaum</div>
+          <div class="cta-row">
+            <a class="btn btn-wa" target="_blank" rel="noopener"
+               onclick="fbq('track','Lead');"
+               href="https://wa.me/491771437576?text=Hallo%20westernrent%2C%20ich%20m%C3%B6chte%20den%20Transporter%20zur%20Tagesmiete%20reservieren.%0A%0ADatum%3A%20...%0A%0ADanke!">
+              <svg class="icon"><use href="#i-wa"/></svg> Tag reservieren
+            </a>
+          </div>
+        </div>
+
+        <div class="price-col">
+          <div class="price-card">
+            <h3>Stundenmiete</h3>
+            <p class="p-sub">Für kurze Transporte, inkl. 100 km</p>
+            <div class="p-rows">
+              <div class="p-row"><span class="lbl">Grundgebühr, einmalig</span><span class="val">20 €</span></div>
+              <div class="p-row"><span class="lbl">Montag bis Freitag</span><span class="val">10 € <small>/ Std.</small></span></div>
+              <div class="p-row"><span class="lbl">Samstag &amp; Sonntag</span><span class="val">15 € <small>/ Std.</small></span></div>
+            </div>
+          </div>
+          <div class="price-card">
+            <h3>Langzeitmiete</h3>
+            <p class="p-sub">Wochen oder Monate, ideal für Firmen</p>
+            <p style="margin:0; color:var(--ink-soft); font-size:14.5px;">
+              Individuelles Angebot mit Rechnung. Kurz anfragen, wir melden uns am selben Tag.
+            </p>
+          </div>
         </div>
       </div>
 
-      <h1>Transporter mieten – schnell & zuverlässig.</h1>
-      <p class="lead">
-        Moderne <b>Maxus Deliver 9</b> für Gewerbe & Privat. Kurzzeit oder Langzeit – <b>Preis auf Anfrage</b>.
-        Klick auf „Zu den Fahrzeugen“ und such dir direkt den passenden Transporter aus.
-      </p>
-
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="#fuhrpark">Zu den Fahrzeugen</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Fuhrpark -->
-  <section id="fuhrpark">
-    <div class="wrap">
-      <div class="section-head">
-        <h2>Aktuell freie Fahrzeuge</h2>
-        <p>3× Maxus Deliver 9 · Diesel · 3,5t · L3H2 · Preis auf Anfrage</p>
-      </div>
-
-      <div class="fleet">
-        <!-- Fahrzeug 1 -->
-        <article class="vehicle">
-          <div class="v-top">
-            <h3 class="v-title">Maxus Deliver 9 #1</h3>
-            <span class="tag">Anfrage</span>
-          </div>
-
-          <div class="thumb">
-            <img src="images/maxus1_thumb.png" alt="Maxus Deliver 9 Transporter #1" onerror="this.style.display='none'; this.parentElement.querySelector('.placeholder').style.display='inline-flex';">
-            <div class="placeholder" style="display:none;">Bild folgt</div>
-          </div>
-
-          <div class="v-specs">
-            <span class="chip">Diesel</span>
-            <span class="chip">3,5t</span>
-            <span class="chip">L3H2</span>
-            <span class="chip">Kurzzeit & Langzeit</span>
-          </div>
-
-          <details class="v-details">
-            <summary>
-              Fahrzeugdetails
-              <span class="mut">öffnen</span>
-            </summary>
-            <div class="inner">
-              <ul>
-                <li>Ideal für Umzug, Lieferung, Handwerk</li>
-                <li>Übergabe/Abholung nach Absprache in Oberhausen</li>
-                <li>Preis auf Anfrage – schnelle Rückmeldung</li>
-              </ul>
-            </div>
-          </details>
-
-          <div class="v-foot">
-            <div>
-              <div class="price">Preis auf Anfrage</div>
-              <div class="subprice">Zeitraum + Einsatzort schicken</div>
-            </div>
-            <a class="btn btn-primary" target="_blank" rel="noopener"
-               onclick="fbq('track', 'Lead');"
-               href="https://wa.me/4917655412198?text=Hallo%20Westernrent%2C%20ich%20m%C3%B6chte%20Maxus%20Deliver%209%20%231%20mieten.%0A%0AZeitraum%3A%20...%0AEinsatzort%3A%20...%0AKurzzeit%20oder%20Langzeit%3A%20...">
-              Anfragen
-            </a>
-          </div>
-        </article>
-
-        <!-- Fahrzeug 2 -->
-        <article class="vehicle">
-          <div class="v-top">
-            <h3 class="v-title">Maxus Deliver 9 #2</h3>
-            <span class="tag">Anfrage</span>
-          </div>
-
-          <div class="thumb">
-            <img src="images/maxus2_thumb.png" alt="Maxus Deliver 9 Transporter #2" onerror="this.style.display='none'; this.parentElement.querySelector('.placeholder').style.display='inline-flex';">
-            <div class="placeholder" style="display:none;">Bild folgt</div>
-          </div>
-
-          <div class="v-specs">
-            <span class="chip">Diesel</span>
-            <span class="chip">3,5t</span>
-            <span class="chip">L3H2</span>
-            <span class="chip">Kurzzeit & Langzeit</span>
-          </div>
-
-          <details class="v-details">
-            <summary>
-              Fahrzeugdetails
-              <span class="mut">öffnen</span>
-            </summary>
-            <div class="inner">
-              <ul>
-                <li>Planbar für Teams & wiederkehrende Touren</li>
-                <li>Kurze Wege in NRW – schneller Start</li>
-                <li>Preis auf Anfrage – schnelle Rückmeldung</li>
-              </ul>
-            </div>
-          </details>
-
-          <div class="v-foot">
-            <div>
-              <div class="price">Preis auf Anfrage</div>
-              <div class="subprice">Zeitraum + Einsatzort schicken</div>
-            </div>
-            <a class="btn btn-primary" target="_blank" rel="noopener"
-               onclick="fbq('track', 'Lead');"
-               href="https://wa.me/4917655412198?text=Hallo%20Westernrent%2C%20ich%20m%C3%B6chte%20Maxus%20Deliver%209%20%232%20mieten.%0A%0AZeitraum%3A%20...%0AEinsatzort%3A%20...%0AKurzzeit%20oder%20Langzeit%3A%20...">
-              Anfragen
-            </a>
-          </div>
-        </article>
-
-        <!-- Fahrzeug 3 -->
-        <article class="vehicle">
-          <div class="v-top">
-            <h3 class="v-title">Maxus Deliver 9 #3</h3>
-            <span class="tag">Anfrage</span>
-          </div>
-
-          <div class="thumb">
-            <img src="images/maxus3_thumb.png" alt="Maxus Deliver 9 Transporter #3" onerror="this.style.display='none'; this.parentElement.querySelector('.placeholder').style.display='inline-flex';">
-            <div class="placeholder" style="display:none;">Bild folgt</div>
-          </div>
-
-          <div class="v-specs">
-            <span class="chip">Diesel</span>
-            <span class="chip">3,5t</span>
-            <span class="chip">L3H2</span>
-            <span class="chip">Kurzzeit & Langzeit</span>
-          </div>
-
-          <details class="v-details">
-            <summary>
-              Fahrzeugdetails
-              <span class="mut">öffnen</span>
-            </summary>
-            <div class="inner">
-              <ul>
-                <li>Top für kurzfristige Ausfälle & Peaks</li>
-                <li>Übergabe/Abholung nach Absprache (Oberhausen)</li>
-                <li>Preis auf Anfrage – schnelle Rückmeldung</li>
-              </ul>
-            </div>
-          </details>
-
-          <div class="v-foot">
-            <div>
-              <div class="price">Preis auf Anfrage</div>
-              <div class="subprice">Zeitraum + Einsatzort schicken</div>
-            </div>
-            <a class="btn btn-primary" target="_blank" rel="noopener"
-               onclick="fbq('track', 'Lead');"
-               href="https://wa.me/4917655412198?text=Hallo%20Westernrent%2C%20ich%20m%C3%B6chte%20Maxus%20Deliver%209%20%233%20mieten.%0A%0AZeitraum%3A%20...%0AEinsatzort%3A%20...%0AKurzzeit%20oder%20Langzeit%3A%20...">
-              Anfragen
-            </a>
-          </div>
-        </article>
-
+      <div class="km-note">
+        <svg class="icon"><use href="#i-pin"/></svg>
+        <div>
+          <b>Mehr als 100 km geplant?</b> Sag es bei der Buchung, dann kosten Extra-Kilometer nur
+          <b>0,20 €</b>. Ohne Vorbuchung berechnen wir <b>0,40 € pro Kilometer</b>.
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Vorteile -->
+  <!-- Fahrzeug -->
+  <section id="fahrzeug">
+    <div class="wrap veh-grid">
+      <div class="veh-media">
+        <img src="images/maxus1_thumb.png" alt="Laderaum und Ausstattung des Maxus Deliver 9"
+             loading="lazy"
+             onerror="this.onerror=null;this.src='header.jpg';">
+      </div>
+      <div>
+        <div class="sec-head" style="margin-bottom:0;">
+          <h2>Der Transporter: Maxus Deliver 9</h2>
+          <p>Sprinter-Klasse mit Hochdach. Eine komplette 2-Zimmer-Wohnung passt in eine Fuhre.</p>
+        </div>
+        <div class="spec-chips">
+          <span class="chip">3,5 t</span>
+          <span class="chip">L3H2 Hochdach</span>
+          <span class="chip">Diesel</span>
+          <span class="chip">3 Sitzplätze</span>
+          <span class="chip">Klasse B</span>
+        </div>
+        <ul class="veh-points">
+          <li><svg class="icon"><use href="#i-check"/></svg><span><b>Ca. 3,40 m Ladelänge</b> und Stehhöhe im Laderaum</span></li>
+          <li><svg class="icon"><use href="#i-check"/></svg><span><b>Rückfahrkamera und Parksensoren</b>, rangiert sich wie ein PKW</span></li>
+          <li><svg class="icon"><use href="#i-check"/></svg><span><b>Klimaanlage und Bluetooth</b> mit Freisprecheinrichtung</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ablauf -->
+  <section id="ablauf">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>So einfach läuft es</h2>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <h3><svg class="icon"><use href="#i-wa"/></svg> Anfragen</h3>
+          <p>WhatsApp oder Anruf mit Wunschtermin. Du bekommst sofort eine Zusage mit Preis.</p>
+        </div>
+        <div class="step">
+          <h3><svg class="icon"><use href="#i-key"/></svg> Abholen</h3>
+          <p>Übergabe an der Schenkendorfstraße 45 in Oberhausen. Ausweis, Führerschein, Kaution, kurze Einweisung.</p>
+        </div>
+        <div class="step">
+          <h3><svg class="icon"><use href="#i-clock"/></svg> Losfahren</h3>
+          <p>Fahrzeugzustand wird per Video festgehalten. Danach gehört der Tag dir.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Warum westernrent -->
   <section id="vorteile">
     <div class="wrap">
-      <div class="section-head">
-        <h2>Vorteile</h2>
-        <p>Clean, schnell, planbar – Fokus auf Abwicklung & Verfügbarkeit</p>
+      <div class="sec-head">
+        <h2>Mieten ohne böse Überraschungen</h2>
       </div>
-
-      <div class="features">
-        <div class="feature">
-          <h3>Fuhrpark-Logik</h3>
-          <p>3 identische Transporter – ideal für wiederkehrende Touren, Teams und planbare Kapazitäten.</p>
+      <div class="trust-grid">
+        <div class="trust-item">
+          <svg class="icon"><use href="#i-shield"/></svg>
+          <div>
+            <h3>Vollkasko immer inklusive</h3>
+            <p>Selbstbeteiligung 650 €, auf Wunsch reduzierbar auf 300 € für 25 € pro Tag.</p>
+          </div>
         </div>
-        <div class="feature">
-          <h3>Flexible Mietdauer</h3>
-          <p>Kurzzeit oder Langzeit – wir finden die passende Lösung. Preis auf Anfrage.</p>
+        <div class="trust-item">
+          <svg class="icon"><use href="#i-video"/></svg>
+          <div>
+            <h3>Video-Übergabe</h3>
+            <p>Der Zustand wird bei Abholung und Rückgabe per Video dokumentiert. Keine Diskussionen um die Kaution.</p>
+          </div>
         </div>
-        <div class="feature">
-          <h3>Schneller Kontakt</h3>
-          <p>WhatsApp/Telefon – du bekommst fix eine Rückmeldung, ohne Formular-Hölle.</p>
+        <div class="trust-item">
+          <svg class="icon"><use href="#i-doc"/></svg>
+          <div>
+            <h3>Rechnung von der GmbH</h3>
+            <p>Gewerblicher Vermieter (westernprint GmbH), ordentliche Rechnung für Privat und Firma.</p>
+          </div>
+        </div>
+        <div class="trust-item">
+          <svg class="icon"><use href="#i-star"/></svg>
+          <div>
+            <h3>Top bewertet</h3>
+            <p>Auf Kleinanzeigen mit „TOP Zufriedenheit" ausgezeichnet. Freundlich und zuverlässig, sagen unsere Mieter.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -773,91 +646,78 @@
   <!-- FAQ -->
   <section id="faq">
     <div class="wrap">
-      <div class="section-head">
-        <h2>FAQ</h2>
-        <p>Die häufigsten Fragen – kurz & klar</p>
+      <div class="sec-head">
+        <h2>Häufige Fragen</h2>
       </div>
-
-      <div class="faq">
-        <details class="faq-item">
-          <summary>Wie frage ich am schnellsten an?</summary>
-          <p>Am besten per WhatsApp: Zeitraum, Einsatzort, Kurzzeit/Langzeit. Dann bekommst du sofort ein Angebot.</p>
+      <div class="faq-list">
+        <details class="faq">
+          <summary>Was brauche ich zum Mieten?</summary>
+          <p>Personalausweis, Führerschein Klasse B (mindestens 2 Jahre) und Mindestalter 21 Jahre. Die Kaution zahlst du bei Abholung bar oder mit Karte.</p>
         </details>
-        <details class="faq-item">
-          <summary>Welche Fahrzeuge sind verfügbar?</summary>
-          <p>Maxus Deliver 9 (Diesel), 3,5t, L3H2. Preis auf Anfrage.</p>
+        <details class="faq">
+          <summary>Wie kurzfristig kann ich mieten?</summary>
+          <p>Oft noch am selben Tag. Schreib einfach per WhatsApp, wir sagen dir sofort, ob der Wunschtermin frei ist.</p>
         </details>
-        <details class="faq-item">
-          <summary>Wo findet die Übergabe statt?</summary>
-          <p>Nach Absprache an unserem Standort: Schenkendorfstraße 45, 46047 Oberhausen.</p>
+        <details class="faq">
+          <summary>Was passiert, wenn ich mehr Kilometer fahre?</summary>
+          <p>100 km pro Miettag sind inklusive. Buchst du weitere Kilometer im Voraus, kosten sie 0,20 € pro Kilometer. Ohne Vorbuchung 0,40 €.</p>
         </details>
-        <details class="faq-item">
-          <summary>Über welche Firma läuft Westernrent?</summary>
-          <p>Die Vermietung „Westernrent“ läuft über die westernprint GmbH (siehe Hinweis im Footer).</p>
+        <details class="faq">
+          <summary>Ist das Fahrzeug versichert?</summary>
+          <p>Ja, Vollkasko ist immer inklusive (Selbstbeteiligung 650 €). Gegen 25 € pro Tag senken wir die Selbstbeteiligung auf 300 €.</p>
+        </details>
+        <details class="faq">
+          <summary>Kann ich den Transporter auch länger mieten?</summary>
+          <p>Ja, für Wochen oder Monate machen wir dir ein individuelles Angebot. Besonders für Firmenkunden mit regelmäßigen Touren lohnt sich das.</p>
         </details>
       </div>
     </div>
   </section>
 
   <!-- Kontakt -->
-  <section id="kontakt">
+  <section id="kontakt" style="padding-top:0;">
     <div class="wrap">
-      <div class="contact">
-        <div>
-          <h2>Kontakt / Angebot</h2>
-          <p>
-            Schreib uns kurz: <b>Zeitraum</b>, <b>Einsatzort</b> und <b>Kurzzeit oder Langzeit</b>.
-            Wir melden uns schnell zurück. <br><br>
-            <span style="color:var(--muted2); font-weight:800;">Preis auf Anfrage · schnelle Rückmeldung per WhatsApp</span>
-          </p>
-
-          <div class="contact-actions">
-            <a class="btn btn-primary" target="_blank" rel="noopener"
-               onclick="fbq('track', 'Lead');"
-               href="https://wa.me/4917655412198?text=Hallo%20Westernrent%2C%20ich%20m%C3%B6chte%20einen%20Transporter%20mieten.%0A%0AZeitraum%3A%20...%0AEinsatzort%3A%20...%0AKurzzeit%20oder%20Langzeit%3A%20...">
-              💬 WhatsApp Anfrage
-            </a>
-            <a class="btn" href="tel:+4917655412198" onclick="fbq('track', 'Contact');">📞 0176 55412198</a>
-            <a class="btn" target="_blank" rel="noopener"
-               href="https://www.google.com/maps?q=Schenkendorfstra%C3%9Fe%2045,%2046047%20Oberhausen">
-              📍 Google Maps
-            </a>
-          </div>
+      <div class="contact-band">
+        <h2>Termin sichern dauert eine Minute.</h2>
+        <p>Schick uns Datum und Uhrzeit per WhatsApp. Du bekommst direkt die Zusage, ganz ohne Formulare.</p>
+        <div class="contact-actions">
+          <a class="btn btn-wa btn-lg" target="_blank" rel="noopener"
+             onclick="fbq('track','Lead');"
+             href="https://wa.me/491771437576?text=Hallo%20westernrent%2C%20ich%20m%C3%B6chte%20einen%20Transporter%20mieten.%0A%0AZeitraum%3A%20...%0A%0ADanke!">
+            <svg class="icon"><use href="#i-wa"/></svg> Jetzt reservieren
+          </a>
+          <a class="btn btn-lg" style="background:transparent; border-color:#3d5478; color:var(--on-navy);"
+             href="tel:+491771437576" onclick="fbq('track','Contact');">
+            <svg class="icon"><use href="#i-phone"/></svg> 0177 1437576
+          </a>
         </div>
-
-        <div class="info">
-          <strong>Kontaktinfos</strong>
-          <div class="row"><span>Telefon / WhatsApp</span><b>0176 55412198</b></div>
-          <div class="row"><span>Standort</span><b>Oberhausen</b></div>
-          <div class="row"><span>Adresse</span><b>Schenkendorfstraße 45</b></div>
-          <div class="row"><span>PLZ</span><b>46047</b></div>
+        <div class="contact-meta">
+          <a target="_blank" rel="noopener" href="https://www.google.com/maps?q=Schenkendorfstra%C3%9Fe%2045,%2046047%20Oberhausen">
+            <svg class="icon"><use href="#i-pin"/></svg> Schenkendorfstraße 45, 46047 Oberhausen
+          </a>
+          <span>Schnell erreichbar aus Essen, Duisburg, Mülheim und Bottrop</span>
         </div>
       </div>
     </div>
   </section>
 
   <footer>
-    <div class="wrap">
-      <div class="footer-row">
-        <div>
-          © <span id="y"></span> Westernrent · <span style="color:rgba(255,255,255,0.62); font-weight:800;">Die Vermietung „Westernrent“ läuft über die westernprint GmbH.</span>
-        </div>
-        <div style="display:flex; gap:8px; flex-wrap:wrap;">
-          <a href="impressum.html">Impressum</a>
-          <a href="#kontakt">Kontakt</a>
-        </div>
-      </div>
+    <div class="wrap footer-row">
+      <div>© <span id="y"></span> westernrent. Die Vermietung läuft über die westernprint GmbH, Oberhausen.</div>
+      <div><a href="impressum.html">Impressum</a></div>
     </div>
   </footer>
 
-  <!-- Floating buttons -->
-  <div class="float" aria-label="Schnellkontakt">
-    <a class="primary" target="_blank" rel="noopener"
-       onclick="fbq('track', 'Lead');"
-       href="https://wa.me/4917655412198?text=Hallo%20Westernrent%2C%20ich%20m%C3%B6chte%20einen%20Transporter%20mieten.%0A%0AZeitraum%3A%20...%0AEinsatzort%3A%20...%0AKurzzeit%20oder%20Langzeit%3A%20...">
-      💬 WhatsApp
+  <!-- Mobile sticky actions -->
+  <div class="action-bar" aria-label="Schnellkontakt">
+    <a class="btn btn-wa" target="_blank" rel="noopener"
+       onclick="fbq('track','Lead');"
+       href="https://wa.me/491771437576?text=Hallo%20westernrent%2C%20ich%20m%C3%B6chte%20einen%20Transporter%20mieten.%0A%0AZeitraum%3A%20...%0A%0ADanke!">
+      <svg class="icon"><use href="#i-wa"/></svg> WhatsApp
     </a>
-    <a href="tel:+4917655412198" onclick="fbq('track', 'Contact');">📞 Anrufen</a>
+    <a class="btn btn-navy" href="tel:+491771437576" onclick="fbq('track','Contact');">
+      <svg class="icon"><use href="#i-phone"/></svg> Anrufen
+    </a>
   </div>
 
   <script>
