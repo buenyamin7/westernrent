@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Datenschutzerklärung | westernrent</title>
+  <meta name="robots" content="noindex" />
+  <meta name="theme-color" content="#1f3557" />
+
+  <style>
+    :root{
+      --bg: #f6f7f9;
+      --surface: #ffffff;
+      --ink: #17202e;
+      --ink-soft: #4a5568;
+      --ink-faint: #5d6b80;
+      --line: #dde3ea;
+      --navy: #1f3557;
+      --r-card: 16px;
+      --r-pill: 999px;
+      --max: 760px;
+    }
+    @media (prefers-color-scheme: dark){
+      :root{
+        --bg: #0f1622;
+        --surface: #17202e;
+        --ink: #eef2f7;
+        --ink-soft: #b7c2d0;
+        --ink-faint: #8c99aa;
+        --line: #2a3749;
+        --navy: #8db0dd;
+      }
+    }
+    *{ box-sizing: border-box; }
+    body{
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg); color: var(--ink); line-height: 1.6; font-size: 15.5px;
+    }
+    a{ color: inherit; }
+    a:focus-visible{ outline: 2px solid var(--navy); outline-offset: 2px; border-radius: 6px; }
+    .wrap{ max-width: var(--max); margin: 0 auto; padding: 0 20px 48px; }
+    h1, h2{ text-wrap: balance; }
+    p, li{ text-wrap: pretty; }
+
+    .top{
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 12px; height: 64px;
+    }
+    .wordmark{
+      text-decoration: none; font-size: 19px; letter-spacing: -0.3px;
+      display: flex; align-items: baseline; white-space: nowrap;
+    }
+    .wordmark em{ font-style: italic; font-weight: 800; color: var(--navy); }
+    .wordmark b{ font-weight: 800; }
+    .back{
+      text-decoration: none; font-weight: 700; font-size: 14px;
+      padding: 9px 16px; border-radius: var(--r-pill);
+      border: 1px solid var(--line); background: var(--surface);
+      white-space: nowrap;
+    }
+    @media (hover: hover) and (pointer: fine){
+      .back:hover{ border-color: var(--ink-faint); }
+    }
+
+    h1{ margin: 28px 0 4px; font-size: 28px; letter-spacing: -0.6px; }
+    .sub{ margin: 0 0 26px; color: var(--ink-faint); font-size: 14px; }
+    h2{ margin: 30px 0 8px; font-size: 17px; letter-spacing: -0.2px; }
+    p, ul{ margin: 8px 0; color: var(--ink-soft); font-size: 14.5px; max-width: 70ch; }
+    ul{ padding-left: 20px; }
+    li{ margin: 5px 0; }
+    strong{ color: var(--ink); }
+
+    footer{
+      margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--line);
+      display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap;
+      color: var(--ink-faint); font-size: 13px;
+    }
+    footer a{ font-weight: 600; text-decoration: none; color: var(--ink-soft); }
+    footer a:hover{ text-decoration: underline; }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="top">
+      <a class="wordmark" href="index.html" aria-label="Zurück zur Startseite"><em>western</em><b>rent</b></a>
+      <a class="back" href="index.html">Zur Startseite</a>
+    </div>
+
+    <h1>Datenschutzerklärung</h1>
+    <p class="sub">Stand: Juli 2026</p>
+
+    <h2>1. Verantwortlicher</h2>
+    <p>
+      westernprint GmbH, Geschäftsführer Bünyamin Dursun,
+      Schenkendorfstraße 45, 46047 Oberhausen,
+      Telefon/WhatsApp <a href="tel:+491771437576">0177 1437576</a>,
+      E-Mail <a href="mailto:info@westernprint.de">info@westernprint.de</a>.
+      Die Vermietung „westernrent" ist ein Angebot der westernprint GmbH.
+    </p>
+
+    <h2>2. Hosting (GitHub Pages)</h2>
+    <p>
+      Diese Website wird über GitHub Pages gehostet, einen Dienst der GitHub Inc.,
+      88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA. Beim Aufruf der Seite
+      verarbeitet GitHub technisch notwendige Daten (u.&nbsp;a. IP-Adresse, Browser, Uhrzeit)
+      in Server-Logfiles. Rechtsgrundlage ist unser berechtigtes Interesse an einer sicheren
+      und zuverlässigen Bereitstellung der Website (Art. 6 Abs. 1 lit. f DSGVO). GitHub ist
+      unter dem EU-US Data Privacy Framework zertifiziert. Weitere Informationen:
+      <a target="_blank" rel="noopener" href="https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a>.
+    </p>
+
+    <h2>3. Meta Pixel (nur mit deiner Einwilligung)</h2>
+    <p>
+      Wenn du im Cookie-Hinweis zustimmst, nutzen wir den Meta Pixel der Meta Platforms
+      Ireland Ltd., Merrion Road, Dublin 4, Irland. Der Pixel hilft uns zu messen, ob unsere
+      Werbeanzeigen funktionieren (z.&nbsp;B. ob jemand nach einem Klick auf eine Anzeige per
+      WhatsApp anfragt). Dabei können Daten auch an Meta in den USA übertragen werden.
+    </p>
+    <ul>
+      <li><strong>Rechtsgrundlage:</strong> deine Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Ohne Zustimmung wird der Pixel nicht geladen.</li>
+      <li><strong>Widerruf:</strong> jederzeit über den Link „Cookie-Einstellungen" im Fußbereich der Startseite.</li>
+      <li>Weitere Informationen: <a target="_blank" rel="noopener" href="https://www.facebook.com/privacy/policy/">Meta-Datenschutzrichtlinie</a>.</li>
+    </ul>
+
+    <h2>4. Kontaktaufnahme (WhatsApp, Telefon, E-Mail)</h2>
+    <p>
+      Wenn du uns kontaktierst, verarbeiten wir deine Angaben (Name, Rufnummer, Nachrichteninhalt)
+      zur Bearbeitung deiner Anfrage und für die Reservierung (Art. 6 Abs. 1 lit. b DSGVO).
+      Bei WhatsApp gelten zusätzlich die Datenschutzbestimmungen der Meta Platforms Ireland Ltd.;
+      WhatsApp erhält dabei technische Daten wie deine Rufnummer.
+    </p>
+
+    <h2>5. Datenverarbeitung bei der Vermietung</h2>
+    <p>Im Rahmen eines Mietvertrags verarbeiten wir folgende Daten:</p>
+    <ul>
+      <li><strong>Vertrags- und Identitätsdaten</strong> (Name, Anschrift, Ausweis- und Führerscheindaten): zur Vertragsabwicklung und Identitätsprüfung (Art. 6 Abs. 1 lit. b DSGVO).</li>
+      <li><strong>Video-Zustandsdokumentation</strong> bei Übergabe und Rückgabe des Fahrzeugs: zur Beweissicherung des Fahrzeugzustands (Art. 6 Abs. 1 lit. b und f DSGVO).</li>
+      <li><strong>GPS-Ortungsdaten und Wegfahrsperre:</strong> Unsere Fahrzeuge sind mit einem GPS-Ortungssystem und einer fernauslösbaren Wegfahrsperre ausgestattet. Die Ortung erfolgt zum Schutz des Fahrzeugs, zur Aufklärung von Unfällen und Diebstahl sowie bei nicht fristgerechter Rückgabe (Art. 6 Abs. 1 lit. f DSGVO). Auf die Ausstattung wird im Mietvertrag hingewiesen.</li>
+      <li><strong>Zahlungs- und Kautionsdaten:</strong> zur Abrechnung des Mietverhältnisses (Art. 6 Abs. 1 lit. b DSGVO).</li>
+    </ul>
+    <p>
+      Vertrags- und Abrechnungsdaten bewahren wir im Rahmen der gesetzlichen Aufbewahrungsfristen
+      (6 bzw. 10 Jahre) auf. Video- und Ortungsdaten löschen wir, sobald sie für den jeweiligen
+      Zweck nicht mehr erforderlich sind, spätestens nach Abschluss des Mietverhältnisses und
+      Ablauf möglicher Anspruchsfristen.
+    </p>
+
+    <h2>6. Deine Rechte</h2>
+    <p>
+      Du hast das Recht auf Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16), Löschung (Art. 17),
+      Einschränkung der Verarbeitung (Art. 18), Datenübertragbarkeit (Art. 20) und Widerspruch
+      gegen Verarbeitungen auf Grundlage berechtigter Interessen (Art. 21). Eine erteilte
+      Einwilligung kannst du jederzeit mit Wirkung für die Zukunft widerrufen. Außerdem kannst du
+      dich bei einer Aufsichtsbehörde beschweren, zuständig für uns:
+      Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen (LDI NRW),
+      <a target="_blank" rel="noopener" href="https://www.ldi.nrw.de">ldi.nrw.de</a>.
+    </p>
+
+    <footer>
+      <div>© <span id="y"></span> westernrent · westernprint GmbH</div>
+      <div><a href="impressum.html">Impressum</a></div>
+    </footer>
+  </div>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
