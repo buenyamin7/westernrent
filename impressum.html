@@ -3,84 +3,95 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Impressum | Westernrent</title>
-  <meta name="theme-color" content="#0b0f14" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <title>Impressum | westernrent</title>
+  <meta name="robots" content="noindex" />
+  <meta name="theme-color" content="#1f3557" />
 
   <style>
     :root{
-      --bg:#070a0f;
-      --panel:rgba(255,255,255,0.06);
-      --border:rgba(255,255,255,0.12);
-      --text:rgba(255,255,255,0.92);
-      --muted:rgba(255,255,255,0.68);
-      --muted2:rgba(255,255,255,0.52);
-      --accent:#39d98a;
-      --shadow:0 20px 60px rgba(0,0,0,0.55);
-      --radius2:24px;
-      --max:920px;
+      --bg: #f6f7f9;
+      --surface: #ffffff;
+      --ink: #17202e;
+      --ink-soft: #4a5568;
+      --ink-faint: #5d6b80;
+      --line: #dde3ea;
+      --navy: #1f3557;
+      --r-card: 16px;
+      --r-pill: 999px;
+      --max: 760px;
     }
-    *{box-sizing:border-box}
+    @media (prefers-color-scheme: dark){
+      :root{
+        --bg: #0f1622;
+        --surface: #17202e;
+        --ink: #eef2f7;
+        --ink-soft: #b7c2d0;
+        --ink-faint: #8c99aa;
+        --line: #2a3749;
+        --navy: #8db0dd;
+      }
+    }
+    *{ box-sizing: border-box; }
     body{
-      margin:0;
-      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-      background:
-        radial-gradient(1200px 600px at 50% -10%, rgba(57,217,138,0.10), transparent 60%),
-        radial-gradient(900px 500px at 20% 10%, rgba(120,140,255,0.07), transparent 55%),
-        var(--bg);
-      color:var(--text);
-      line-height:1.6;
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg); color: var(--ink); line-height: 1.6; font-size: 15.5px;
     }
-    a{color:inherit}
-    .wrap{max-width:var(--max); margin:0 auto; padding:24px 18px 44px}
-    .top{
-      display:flex; align-items:center; justify-content:space-between; gap:12px;
-      padding:14px 0 20px;
-    }
-    .brand{
-      display:flex; align-items:center; gap:10px; text-decoration:none;
-    }
-    .logo{
-      width:38px; height:38px; border-radius:14px;
-      background:linear-gradient(135deg, rgba(57,217,138,0.22), rgba(255,255,255,0.06));
-      border:1px solid rgba(255,255,255,0.14);
-      display:flex; align-items:center; justify-content:center;
-      font-weight:900; letter-spacing:.5px;
-    }
-    .brand strong{font-weight:900; letter-spacing:.4px}
-    .brand small{display:block; color:var(--muted2); font-weight:700; font-size:12px; margin-top:-2px}
+    a{ color: inherit; }
+    a:focus-visible{ outline: 2px solid var(--navy); outline-offset: 2px; border-radius: 6px; }
+    .wrap{ max-width: var(--max); margin: 0 auto; padding: 0 20px 48px; }
+    h1, h2{ text-wrap: balance; }
+    p{ text-wrap: pretty; }
 
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center; gap:10px;
-      padding:10px 14px; border-radius:14px; font-weight:900; font-size:13px;
-      text-decoration:none;
-      border:1px solid rgba(255,255,255,0.14);
-      background:rgba(255,255,255,0.04);
-      color:var(--text);
+    .top{
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 12px; height: 64px;
     }
-    .btn:hover{background:rgba(255,255,255,0.06); border-color:rgba(255,255,255,0.18)}
+    .wordmark{
+      text-decoration: none; font-size: 19px; letter-spacing: -0.3px;
+      display: flex; align-items: baseline; white-space: nowrap;
+    }
+    .wordmark em{ font-style: italic; font-weight: 800; color: var(--navy); }
+    .wordmark b{ font-weight: 800; }
+    .back{
+      text-decoration: none; font-weight: 700; font-size: 14px;
+      padding: 9px 16px; border-radius: var(--r-pill);
+      border: 1px solid var(--line); background: var(--surface);
+      white-space: nowrap;
+    }
+    @media (hover: hover) and (pointer: fine){
+      .back:hover{ border-color: var(--ink-faint); }
+    }
+
+    h1{ margin: 28px 0 4px; font-size: 28px; letter-spacing: -0.6px; }
+    .sub{ margin: 0 0 22px; color: var(--ink-faint); font-size: 14px; }
+
     .card{
-      background:var(--panel);
-      border:1px solid var(--border);
-      border-radius:var(--radius2);
-      box-shadow:var(--shadow);
-      padding:22px;
+      background: var(--surface); border: 1px solid var(--line);
+      border-radius: var(--r-card); padding: 6px 22px;
     }
-    h1{margin:0 0 12px; font-size:26px; letter-spacing:-.3px}
-    h2{margin:18px 0 8px; font-size:16px; letter-spacing:-.2px}
-    p{margin:8px 0; color:var(--muted)}
-    .line{height:1px; background:rgba(255,255,255,0.10); margin:16px 0}
-    .kv{display:grid; grid-template-columns: 220px 1fr; gap:10px; margin-top:10px}
-    .kv div{padding:8px 0; border-bottom:1px solid rgba(255,255,255,0.08)}
-    .kv div:nth-last-child(-n+2){border-bottom:0}
-    .k{color:var(--muted2); font-weight:800; font-size:13px}
-    .v{color:var(--text); font-weight:700; font-size:13.5px}
-    .foot{margin-top:18px; color:var(--muted2); font-size:12px}
-    @media (max-width:700px){
-      .kv{grid-template-columns:1fr}
-      .top{flex-direction:column; align-items:flex-start}
+    .kv{ display: grid; grid-template-columns: 190px 1fr; }
+    .kv > div{ padding: 12px 0; border-bottom: 1px solid var(--line); }
+    .kv > div:nth-last-child(-n+2){ border-bottom: 0; }
+    .k{ color: var(--ink-faint); font-weight: 600; font-size: 13.5px; }
+    .v{ font-weight: 600; font-size: 14.5px; }
+
+    h2{ margin: 30px 0 8px; font-size: 17px; letter-spacing: -0.2px; }
+    .prose p{ margin: 8px 0; color: var(--ink-soft); font-size: 14.5px; max-width: 70ch; }
+
+    footer{
+      margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--line);
+      display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap;
+      color: var(--ink-faint); font-size: 13px;
+    }
+    footer a{ font-weight: 600; text-decoration: none; color: var(--ink-soft); }
+    footer a:hover{ text-decoration: underline; }
+
+    @media (max-width: 640px){
+      .kv{ grid-template-columns: 1fr; }
+      .kv > div{ padding: 4px 0 2px; border-bottom: 0; }
+      .kv > .v{ padding: 0 0 12px; border-bottom: 1px solid var(--line); }
+      .kv > .v:last-child{ border-bottom: 0; }
     }
   </style>
 </head>
@@ -88,46 +99,45 @@
 <body>
   <div class="wrap">
     <div class="top">
-      <a class="brand" href="index.html">
-        <div class="logo">WR</div>
-        <div>
-          <strong>Westernrent</strong>
-          <small>Transporter-Vermietung · Oberhausen</small>
-        </div>
-      </a>
-      <a class="btn" href="index.html">← Zurück zur Startseite</a>
+      <a class="wordmark" href="index.html" aria-label="Zurück zur Startseite"><em>western</em><b>rent</b></a>
+      <a class="back" href="index.html">Zur Startseite</a>
     </div>
 
-    <div class="card">
-      <h1>Impressum</h1>
-      <p>Angaben gemäß § 5 TMG</p>
+    <h1>Impressum</h1>
+    <p class="sub">Angaben gemäß § 5 DDG</p>
 
-      <div class="kv" aria-label="Impressum Angaben">
+    <div class="card">
+      <div class="kv">
         <div class="k">Unternehmen</div><div class="v">westernprint GmbH</div>
         <div class="k">Geschäftsführer</div><div class="v">Bünyamin Dursun</div>
-        <div class="k">Adresse</div><div class="v">Schenkendorfstraße 45, 46047 Oberhausen, Deutschland</div>
-        <div class="k">Handelsregister</div><div class="v">HRB 38060</div>
-        <div class="k">Registergericht</div><div class="v">Amtsgericht Duisburg</div>
+        <div class="k">Anschrift</div><div class="v">Schenkendorfstraße 45, 46047 Oberhausen</div>
+        <div class="k">Handelsregister</div><div class="v">HRB 38060, Amtsgericht Duisburg</div>
         <div class="k">USt-IdNr.</div><div class="v">DE369060880</div>
-        <div class="k">Telefon</div><div class="v"><a href="tel:+4917655412198">+49 176 55412198</a></div>
+        <div class="k">Telefon / WhatsApp</div><div class="v"><a href="tel:+491771437576">0177 1437576</a></div>
         <div class="k">E-Mail</div><div class="v"><a href="mailto:info@westernprint.de">info@westernprint.de</a></div>
       </div>
+    </div>
 
-      <div class="line"></div>
+    <div class="prose">
+      <h2>Verantwortlich für den Inhalt</h2>
+      <p>Bünyamin Dursun, Anschrift wie oben. Die Vermietung „westernrent" ist ein Angebot der westernprint GmbH.</p>
 
       <h2>Online-Streitbeilegung</h2>
       <p>
         Plattform der EU-Kommission zur Online-Streitbeilegung:
-        <a target="_blank" rel="noopener" href="https://ec.europa.eu/consumers/odr">https://ec.europa.eu/consumers/odr</a>
+        <a target="_blank" rel="noopener" href="https://ec.europa.eu/consumers/odr">ec.europa.eu/consumers/odr</a>
       </p>
       <p>
-        Wir sind weder verpflichtet noch bereit, an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
-      </p>
-
-      <p class="foot">
-        Hinweis: Die Vermietung „Westernrent“ läuft über die westernprint GmbH.
+        Wir sind weder verpflichtet noch bereit, an einem Streitbeilegungsverfahren vor einer
+        Verbraucherschlichtungsstelle teilzunehmen.
       </p>
     </div>
+
+    <footer>
+      <div>© <span id="y"></span> westernrent · westernprint GmbH</div>
+      <div><a href="datenschutz.html">Datenschutz</a></div>
+    </footer>
   </div>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
