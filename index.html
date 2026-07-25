@@ -275,7 +275,6 @@
     }
     .hero-note span{ display: inline-flex; align-items: center; gap: 7px; }
     .hero-note .icon{ width: 15px; height: 15px; color: #9fc0ea; }
-    .hero-photo{ display: none; }
 
     /* Entry motion: hero fades up once on load, scroll-reveal nur wo unterstützt.
        Beides kollabiert unter prefers-reduced-motion zur statischen Ansicht. */
@@ -499,23 +498,21 @@
 
     /* ===== Responsive ===== */
     @media (max-width: 900px){
-      /* Mobil: Text oben auf Navy, Foto darunter in voller Breite (nichts verdeckt den Transporter) */
+      /* Mobil: Text oben, Bild so positioniert, dass der Transporter frei unter dem Text steht */
       .hero{
         display: block;
         min-height: 0;
-        background: linear-gradient(170deg, #1c2e4c 0%, #16263f 55%, #0e1826 100%);
+        background:
+          linear-gradient(180deg,
+            rgba(10, 15, 24, 0.80) 0%,
+            rgba(10, 15, 24, 0.62) 30%,
+            rgba(10, 15, 24, 0.18) 52%,
+            rgba(10, 15, 24, 0.00) 70%),
+          url('header.jpg') 60% calc(100% + 110px) / cover no-repeat,
+          var(--navy-deep);
       }
-      .hero-inner{ padding: 38px 0 26px; max-width: none; }
-      h1, .hero-sub{ text-shadow: none; }
-      .hero-photo{
-        display: block;
-        margin: 0 -20px;
-      }
-      .hero-photo img{
-        display: block; width: 100%;
-        aspect-ratio: 4 / 3;
-        object-fit: cover;
-      }
+      .hero-inner{ padding: 26px 0 44vh; max-width: none; }
+      .hero-note{ gap: 14px; font-size: 12.5px; margin-top: 14px; }
       .veh-grid{ grid-template-columns: 1fr; gap: 22px; }
       .veh-grid .veh-media{ order: -1; }
       .price-grid{ grid-template-columns: 1fr; }
@@ -587,9 +584,6 @@
           <span><svg class="icon"><use href="#i-check"/></svg> Führerschein Klasse B reicht</span>
           <span><svg class="icon"><use href="#i-check"/></svg> Vollkasko inklusive</span>
         </div>
-      </div>
-      <div class="hero-photo">
-        <img src="header.jpg" alt="Maxus Deliver 9 Transporter von westernrent in Oberhausen">
       </div>
     </div>
   </header>
