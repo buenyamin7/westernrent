@@ -29,12 +29,13 @@
   <meta name="description" content="Transporter mieten in Oberhausen: Maxus Deliver 9 (3,5 t, L3H2) ab 75 € pro Tag inkl. 100 km. Stundenmiete ab 10 €/Std. Vollkasko inklusive, Führerschein Klasse B reicht. Jetzt per WhatsApp reservieren: 0177 1437576." />
   <meta name="theme-color" content="#1f3557" />
   <link rel="canonical" href="https://westernrent.de/" />
+  <link rel="preload" as="image" href="header.jpg" />
 
   <meta property="og:title" content="Transporter mieten in Oberhausen ab 75 €/Tag | westernrent" />
   <meta property="og:description" content="Maxus Deliver 9 mit Hochdach, Vollkasko inklusive, 100 km frei. Reservierung per WhatsApp oder Anruf: 0177 1437576." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://westernrent.de/" />
-  <meta property="og:image" content="https://buenyamin7.github.io/westernrent/images/maxus1_thumb.png" />
+  <meta property="og:image" content="https://westernrent.de/header.jpg" />
   <meta property="og:locale" content="de_DE" />
 
   <script type="application/ld+json">
@@ -44,7 +45,7 @@
     "name": "westernrent Transporter Vermietung",
     "url": "https://westernrent.de",
     "telephone": "+491771437576",
-    "image": "https://buenyamin7.github.io/westernrent/images/maxus1_thumb.png",
+    "image": "https://westernrent.de/header.jpg",
     "priceRange": "€€",
     "parentOrganization": { "@type": "Organization", "name": "westernprint GmbH" },
     "address": {
@@ -136,12 +137,12 @@
 
     .icon{ width: 18px; height: 18px; flex: none; }
 
-    /* ===== Top bar ===== */
+    /* ===== Top bar (immer dunkel, verschmilzt mit dem Hero-Foto) ===== */
     .topbar{
       position: sticky; top: 0; z-index: 50;
-      background: color-mix(in srgb, var(--bg) 88%, transparent);
+      background: rgba(13, 20, 32, 0.82);
       backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--line);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
     .topbar-inner{
       display: flex; align-items: center; justify-content: space-between;
@@ -150,9 +151,15 @@
     .wordmark{
       text-decoration: none; font-size: 20px; letter-spacing: -0.3px;
       display: flex; align-items: baseline; white-space: nowrap;
+      color: #f4f7fb;
     }
-    .wordmark em{ font-style: italic; font-weight: 800; color: var(--navy); }
+    .wordmark em{ font-style: italic; font-weight: 800; color: #9fc0ea; }
     .wordmark b{ font-weight: 800; }
+    .topbar .btn:not(.btn-wa){
+      background: rgba(255, 255, 255, 0.07);
+      border-color: rgba(255, 255, 255, 0.24);
+      color: #f4f7fb;
+    }
     .top-actions{ display: flex; gap: 10px; align-items: center; }
 
     .btn{
@@ -183,46 +190,60 @@
     }
     .btn-lg{ padding: 14px 26px; font-size: 16px; }
 
-    /* ===== Hero ===== */
-    .hero{ padding: 48px 0 26px; }
-    .hero-grid{
-      display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 36px; align-items: center;
+    /* ===== Hero (Vollbild-Foto mit Text-Overlay) ===== */
+    .hero{
+      position: relative;
+      display: flex; align-items: center;
+      min-height: clamp(480px, 74vh, 680px);
+      background:
+        linear-gradient(78deg,
+          rgba(10, 15, 24, 0.82) 0%,
+          rgba(10, 15, 24, 0.55) 42%,
+          rgba(10, 15, 24, 0.14) 72%,
+          rgba(10, 15, 24, 0.30) 100%),
+        url('header.jpg') center / cover no-repeat,
+        var(--navy-deep);
     }
+    .hero .wrap{ width: 100%; }
+    .hero-inner{ max-width: 580px; padding: 52px 0; }
     h1{
       margin: 0 0 14px;
       font-size: clamp(30px, 4.6vw, 46px);
       line-height: 1.06; letter-spacing: -1px; font-weight: 800;
+      color: #ffffff;
+      text-shadow: 0 2px 18px rgba(0, 0, 0, 0.35);
     }
-    h1 .loc{ color: var(--navy); }
+    h1 .loc{ color: #9fc0ea; }
     .hero-sub{
-      margin: 0 0 22px; color: var(--ink-soft); font-size: 17.5px; max-width: 46ch;
+      margin: 0 0 22px; color: rgba(241, 245, 250, 0.9); font-size: 17.5px; max-width: 46ch;
+      text-shadow: 0 1px 12px rgba(0, 0, 0, 0.35);
     }
     .hero-actions{ display: flex; gap: 12px; flex-wrap: wrap; }
+    .hero .btn-plain{
+      background: rgba(13, 20, 32, 0.45);
+      border-color: rgba(255, 255, 255, 0.35);
+      color: #ffffff;
+      backdrop-filter: blur(4px);
+    }
+    @media (hover: hover) and (pointer: fine){
+      .hero .btn-plain:hover{ border-color: rgba(255, 255, 255, 0.6); }
+    }
     .hero-note{
       margin-top: 18px; display: flex; gap: 18px; flex-wrap: wrap;
-      color: var(--ink-faint); font-size: 13.5px; font-weight: 600;
+      color: rgba(241, 245, 250, 0.82); font-size: 13.5px; font-weight: 600;
     }
     .hero-note span{ display: inline-flex; align-items: center; gap: 7px; }
-    .hero-note .icon{ width: 15px; height: 15px; color: var(--navy); }
-
-    .hero-media{
-      border-radius: var(--r-card); overflow: hidden;
-      box-shadow: var(--shadow);
-      background: var(--surface-2);
-      aspect-ratio: 4 / 3;
-    }
-    .hero-media img{ width: 100%; height: 100%; object-fit: cover; }
+    .hero-note .icon{ width: 15px; height: 15px; color: #9fc0ea; }
 
     /* Entry motion: hero fades up once on load, scroll-reveal nur wo unterstützt.
        Beides kollabiert unter prefers-reduced-motion zur statischen Ansicht. */
     @media (prefers-reduced-motion: no-preference){
-      .hero-grid > *{
+      .hero-inner{
         opacity: 1; transform: none;
         transition: opacity .55s var(--ease-out), transform .55s var(--ease-out);
       }
-      .hero-grid > :nth-child(2){ transition-delay: .08s; }
       @starting-style{
-        .hero-grid > *{ opacity: 0; transform: translateY(10px); }
+        .hero-inner{ opacity: 0; transform: translateY(10px); }
       }
       @supports (animation-timeline: view()){
         .price-card, .step, .trust-item, details.faq{
@@ -436,7 +457,8 @@
 
     /* ===== Responsive ===== */
     @media (max-width: 900px){
-      .hero-grid, .veh-grid{ grid-template-columns: 1fr; gap: 22px; }
+      .hero{ min-height: clamp(440px, 68vh, 600px); }
+      .veh-grid{ grid-template-columns: 1fr; gap: 22px; }
       .veh-grid .veh-media{ order: -1; }
       .price-grid{ grid-template-columns: 1fr; }
       .steps{ grid-template-columns: 1fr; }
@@ -488,8 +510,8 @@
 
   <!-- Hero -->
   <header id="top" class="hero">
-    <div class="wrap hero-grid">
-      <div>
+    <div class="wrap">
+      <div class="hero-inner">
         <h1>Transporter mieten<br>in <span class="loc">Oberhausen</span>.</h1>
         <p class="hero-sub">
           Maxus Deliver 9 mit Hochdach, ab 75 € pro Tag inkl. 100 km.
@@ -501,16 +523,12 @@
              href="https://wa.me/491771437576?text=Hallo%20westernrent%2C%20ich%20m%C3%B6chte%20einen%20Transporter%20mieten.%0A%0AZeitraum%3A%20...%0AAbholung%3A%20Oberhausen%0A%0ADanke!">
             <svg class="icon"><use href="#i-wa"/></svg> Jetzt reservieren
           </a>
-          <a class="btn btn-lg" href="#preise">Preise ansehen</a>
+          <a class="btn btn-lg btn-plain" href="#preise">Preise ansehen</a>
         </div>
         <div class="hero-note">
           <span><svg class="icon"><use href="#i-check"/></svg> Führerschein Klasse B reicht</span>
           <span><svg class="icon"><use href="#i-check"/></svg> Vollkasko inklusive</span>
         </div>
-      </div>
-      <div class="hero-media">
-        <img src="images/maxus1_thumb.png" alt="Maxus Deliver 9 Transporter von westernrent in Oberhausen"
-             fetchpriority="high">
       </div>
     </div>
   </header>
