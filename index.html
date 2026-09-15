@@ -26,10 +26,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Transporter mieten in Oberhausen ab 75 €/Tag | westernrent</title>
-  <meta name="description" content="Transporter mieten in Oberhausen: Maxus Deliver 9 (3,5 t, L3H2) ab 75 € pro Tag inkl. 100 km. Stundenmiete ab 10 €/Std. Vollkasko inklusive, Führerschein Klasse B reicht. Jetzt per WhatsApp reservieren: 0177 1437576." />
+  <meta name="description" content="Transporter mieten in Oberhausen ab 75 €/Tag inkl. 100 km und Vollkasko. Maxus Deliver 9 Hochdach, Klasse B reicht, auch stundenweise. WhatsApp: 0177 1437576" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <meta name="geo.region" content="DE-NW" />
+  <meta name="geo.placename" content="Oberhausen" />
+  <meta name="geo.position" content="51.47959;6.86775" />
+  <meta name="ICBM" content="51.47959, 6.86775" />
   <meta name="theme-color" content="#1f3557" />
   <link rel="canonical" href="https://westernrent.de/" />
-  <link rel="preload" as="image" href="header.jpg" />
+  <link rel="preload" as="image" href="header.jpg" media="(min-width: 901px)" />
+  <link rel="preload" as="image" href="header-mobile.jpg" media="(max-width: 900px)" />
 
   <meta property="og:title" content="Transporter mieten in Oberhausen ab 75 €/Tag | westernrent" />
   <meta property="og:description" content="Maxus Deliver 9 mit Hochdach, Vollkasko inklusive, 100 km frei. Reservierung per WhatsApp oder Anruf: 0177 1437576." />
@@ -37,71 +43,361 @@
   <meta property="og:url" content="https://westernrent.de/" />
   <meta property="og:image" content="https://westernrent.de/header.jpg" />
   <meta property="og:locale" content="de_DE" />
+  <meta property="og:site_name" content="westernrent" />
+  <meta property="og:image:alt" content="Transporter von westernrent vor dem Standort in Oberhausen" />
+  <meta name="twitter:card" content="summary_large_image" />
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "westernrent Transporter Vermietung",
-    "url": "https://westernrent.de",
-    "telephone": "+491771437576",
-    "image": "https://westernrent.de/header.jpg",
-    "priceRange": "€€",
-    "parentOrganization": { "@type": "Organization", "name": "westernprint GmbH" },
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Schenkendorfstraße 45",
-      "postalCode": "46047",
-      "addressLocality": "Oberhausen",
-      "addressCountry": "DE"
-    },
-    "geo": { "@type": "GeoCoordinates", "latitude": 51.47, "longitude": 6.86 },
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-      "opens": "08:00", "closes": "20:00"
-    },
-    "areaServed": ["Oberhausen", "Essen", "Duisburg", "Mülheim an der Ruhr", "Bottrop"],
-    "makesOffer": [
-      { "@type": "Offer", "name": "Tagesmiete Transporter Mo-Do", "price": "75", "priceCurrency": "EUR" },
-      { "@type": "Offer", "name": "Tagesmiete Transporter Fr-So", "price": "100", "priceCurrency": "EUR" },
-      { "@type": "Offer", "name": "Stundenmiete Transporter Mo-Fr", "price": "10", "priceCurrency": "EUR" }
-    ]
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Was brauche ich, um einen Transporter zu mieten?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Personalausweis, Führerschein Klasse B (mindestens 2 Jahre) und Mindestalter 21 Jahre. Die Kaution zahlst du bei Abholung bar oder mit Karte." }
-      },
-      {
-        "@type": "Question",
-        "name": "Wie kurzfristig kann ich einen Transporter in Oberhausen mieten?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Oft noch am selben Tag. Einfach per WhatsApp an 0177 1437576 schreiben, wir sagen dir sofort, ob der Wunschtermin frei ist." }
-      },
-      {
-        "@type": "Question",
-        "name": "Was kostet ein Miet-Transporter pro Tag?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Montag bis Donnerstag 75 € pro Tag, Freitag bis Sonntag und an Feiertagen 100 € pro Tag, jeweils inklusive 100 Freikilometer und Vollkasko." }
-      },
-      {
-        "@type": "Question",
-        "name": "Ist der Transporter versichert?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Ja, Vollkasko ist immer inklusive (Selbstbeteiligung 650 €). Gegen 25 € pro Tag lässt sich die Selbstbeteiligung auf 300 € senken." }
-      },
-      {
-        "@type": "Question",
-        "name": "Kann ich den Transporter auch länger mieten?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Ja, für Wochen oder Monate gibt es ein individuelles Angebot mit Rechnung, besonders für Firmenkunden mit regelmäßigen Touren." }
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://westernrent.de/#westernprint",
+      "name": "westernprint GmbH",
+      "url": "https://westernprint.de",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Schenkendorfstraße 45",
+        "postalCode": "46047",
+        "addressLocality": "Oberhausen",
+        "addressRegion": "Nordrhein-Westfalen",
+        "addressCountry": "DE"
       }
-    ]
-  }
+    },
+    {
+      "@type": "AutoRental",
+      "@id": "https://westernrent.de/#vermietung",
+      "name": "westernrent Transporter Vermietung",
+      "alternateName": [
+        "westernrent",
+        "westernrent Oberhausen"
+      ],
+      "description": "Transporter-Vermietung in Oberhausen im Ruhrgebiet: Maxus Deliver 9 mit Hochdach (L3H2, 3,5 t), fahrbar mit Führerschein Klasse B. Tagesmiete ab 75 € inkl. 100 km und Vollkasko, Stundenmiete ab 10 € pro Stunde, Wochen- und Monatsmiete für Firmen.",
+      "url": "https://westernrent.de/",
+      "telephone": "+491771437576",
+      "image": [
+        "https://westernrent.de/header.jpg",
+        "https://westernrent.de/images/maxus-deliver-9.webp"
+      ],
+      "priceRange": "75–100 € pro Tag",
+      "currenciesAccepted": "EUR",
+      "parentOrganization": {
+        "@id": "https://westernrent.de/#westernprint"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Schenkendorfstraße 45",
+        "postalCode": "46047",
+        "addressLocality": "Oberhausen",
+        "addressRegion": "Nordrhein-Westfalen",
+        "addressCountry": "DE"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 51.47959,
+        "longitude": 6.86775
+      },
+      "hasMap": "https://www.google.com/maps?q=Schenkendorfstra%C3%9Fe%2045%2C%2046047%20Oberhausen",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "08:00",
+        "closes": "20:00"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Oberhausen",
+          "sameAs": "https://de.wikipedia.org/wiki/Oberhausen"
+        },
+        {
+          "@type": "City",
+          "name": "Essen",
+          "sameAs": "https://de.wikipedia.org/wiki/Essen"
+        },
+        {
+          "@type": "City",
+          "name": "Duisburg",
+          "sameAs": "https://de.wikipedia.org/wiki/Duisburg"
+        },
+        {
+          "@type": "City",
+          "name": "Mülheim an der Ruhr",
+          "sameAs": "https://de.wikipedia.org/wiki/Mülheim_an_der_Ruhr"
+        },
+        {
+          "@type": "City",
+          "name": "Bottrop",
+          "sameAs": "https://de.wikipedia.org/wiki/Bottrop"
+        }
+      ],
+      "knowsAbout": [
+        "Transporter mieten",
+        "Umzugswagen mieten",
+        "Sprinter mieten",
+        "Möbeltransport",
+        "Sperrmüll-Transport",
+        "Langzeitmiete Transporter"
+      ],
+      "sameAs": [
+        "https://www.kleinanzeigen.de/pro/westernprint-gmbh"
+      ],
+      "makesOffer": [
+        {
+          "@type": "Offer",
+          "name": "Tagesmiete Transporter Montag bis Donnerstag",
+          "description": "24 Stunden, inkl. 100 km und Vollkasko",
+          "itemOffered": {
+            "@id": "https://westernrent.de/#fahrzeug"
+          },
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "price": "75",
+            "priceCurrency": "EUR",
+            "unitCode": "DAY",
+            "valueAddedTaxIncluded": true
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "Tagesmiete Transporter Freitag bis Sonntag und Feiertage",
+          "description": "24 Stunden, inkl. 100 km und Vollkasko",
+          "itemOffered": {
+            "@id": "https://westernrent.de/#fahrzeug"
+          },
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "price": "100",
+            "priceCurrency": "EUR",
+            "unitCode": "DAY",
+            "valueAddedTaxIncluded": true
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "Stundenmiete Transporter Montag bis Freitag",
+          "description": "zzgl. einmalig 20 € Grundgebühr, inkl. 100 km",
+          "itemOffered": {
+            "@id": "https://westernrent.de/#fahrzeug"
+          },
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "price": "10",
+            "priceCurrency": "EUR",
+            "unitCode": "HUR",
+            "valueAddedTaxIncluded": true
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "Stundenmiete Transporter Samstag und Sonntag",
+          "description": "zzgl. einmalig 20 € Grundgebühr, inkl. 100 km",
+          "itemOffered": {
+            "@id": "https://westernrent.de/#fahrzeug"
+          },
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "price": "15",
+            "priceCurrency": "EUR",
+            "unitCode": "HUR",
+            "valueAddedTaxIncluded": true
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "Mehrkilometer mit Vorausbuchung",
+          "description": "ohne Vorausbuchung 0,40 € pro km",
+          "itemOffered": {
+            "@id": "https://westernrent.de/#fahrzeug"
+          },
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "price": "0.20",
+            "priceCurrency": "EUR",
+            "unitCode": "KMT",
+            "valueAddedTaxIncluded": true
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Vehicle",
+      "@id": "https://westernrent.de/#fahrzeug",
+      "name": "Maxus Deliver 9 L3H2 Hochdach",
+      "brand": {
+        "@type": "Brand",
+        "name": "Maxus"
+      },
+      "model": "Deliver 9",
+      "vehicleConfiguration": "Kastenwagen L3H2 Hochdach",
+      "fuelType": "Diesel",
+      "vehicleSeatingCapacity": 3,
+      "weightTotal": {
+        "@type": "QuantitativeValue",
+        "value": 3500,
+        "unitCode": "KGM"
+      },
+      "image": "https://westernrent.de/images/maxus-deliver-9.webp",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Ladelänge",
+          "value": "ca. 3,40 m"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Laderaumhöhe",
+          "value": "Stehhöhe"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Führerschein",
+          "value": "Klasse B"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Ausstattung",
+          "value": "Rückfahrkamera, Parksensoren, Klimaanlage, Bluetooth-Freisprecheinrichtung"
+        }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://westernrent.de/#website",
+      "url": "https://westernrent.de/",
+      "name": "westernrent",
+      "inLanguage": "de-DE",
+      "publisher": {
+        "@id": "https://westernrent.de/#vermietung"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://westernrent.de/#webpage",
+      "url": "https://westernrent.de/",
+      "name": "Transporter mieten in Oberhausen ab 75 €/Tag | westernrent",
+      "isPartOf": {
+        "@id": "https://westernrent.de/#website"
+      },
+      "about": {
+        "@id": "https://westernrent.de/#vermietung"
+      },
+      "inLanguage": "de-DE",
+      "dateModified": "2026-09-15"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://westernrent.de/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Was brauche ich, um einen Transporter zu mieten?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Personalausweis, Führerschein Klasse B (mindestens 2 Jahre) und Mindestalter 21 Jahre. Die Kaution zahlst du bei Abholung bar oder mit Karte."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Brauche ich eine Kreditkarte?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nein. Die Kaution zahlst du bei Abholung bar oder mit Karte, eine Kreditkarte ist nicht nötig."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie kurzfristig kann ich einen Transporter in Oberhausen mieten?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oft noch am selben Tag. Schreib einfach per WhatsApp an 0177 1437576, wir sagen dir sofort, ob der Wunschtermin frei ist."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Was kostet ein Miet-Transporter pro Tag?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Montag bis Donnerstag 75 € pro Tag, Freitag bis Sonntag und an Feiertagen 100 € pro Tag, jeweils inklusive 100 Freikilometer und Vollkasko."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Was kostet die Stundenmiete?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Einmalig 20 € Grundgebühr plus 10 € pro Stunde von Montag bis Freitag oder 15 € pro Stunde am Samstag und Sonntag, jeweils inklusive 100 km."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Was passiert, wenn ich mehr Kilometer fahre?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "100 km pro Miettag sind inklusive. Buchst du weitere Kilometer im Voraus, kosten sie 0,20 € pro Kilometer. Ohne Vorbuchung 0,40 €."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie groß ist der Laderaum?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Der Maxus Deliver 9 in der Hochdach-Version L3H2 hat ca. 3,40 m Ladelänge und Stehhöhe im Laderaum. Eine komplette 2-Zimmer-Wohnung passt in eine Fuhre."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kann ich den Transporter auch am Wochenende mieten?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja. Abholung und Rückgabe gehen nach Absprache auch samstags und sonntags. Freitag bis Sonntag kostet die Tagesmiete 100 € inklusive 100 km."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ist der Transporter versichert?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja, Vollkasko ist immer inklusive (Selbstbeteiligung 650 €). Gegen 25 € pro Tag senken wir die Selbstbeteiligung auf 300 €."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Welchen Kraftstoff tankt der Transporter?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Diesel. Den Kraftstoff zahlst du nach Verbrauch."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Lohnt sich die Anfahrt aus Essen, Duisburg, Mülheim oder Bottrop?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja. Der Standort an der Schenkendorfstraße 45 in Oberhausen liegt direkt an der A516 und ist aus Essen, Duisburg, Mülheim an der Ruhr und Bottrop in wenigen Minuten erreichbar."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kann ich den Transporter auch länger mieten?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja, für Wochen oder Monate gibt es ein individuelles Angebot mit Rechnung, besonders für Firmenkunden mit regelmäßigen Touren."
+          }
+        }
+      ]
+    }
+  ]
+}
   </script>
 
   <style>
@@ -453,6 +749,20 @@
     .contact-meta a:hover{ text-decoration: underline; }
     .contact-meta .icon{ width: 16px; height: 16px; }
 
+    /* ===== Fakten auf einen Blick ===== */
+    .facts-card{ max-width: 760px; }
+    .facts-card .p-row{ align-items: flex-start; }
+    .facts-card .p-row .lbl{ flex: 0 0 150px; color: var(--ink-soft); }
+    .facts-card .p-row .val{
+      flex: 1; white-space: normal; text-align: left;
+      font-weight: 600; font-size: 15px; text-wrap: pretty;
+    }
+    @media (max-width: 560px){
+      .facts-card .p-row{ flex-direction: column; gap: 2px; }
+      .facts-card .p-row .lbl{ flex: none; font-size: 13px; }
+    }
+    .nap{ font-style: normal; }
+
     /* ===== Footer ===== */
     footer{
       padding: 30px 0 110px; color: var(--ink-faint); font-size: 13px;
@@ -600,7 +910,7 @@
     <div class="wrap">
       <div class="sec-head">
         <h2>Klare Preise. Keine Sternchen.</h2>
-        <p>Alle Preise inkl. 19 % MwSt. Kraftstoff nach Verbrauch, Kaution bei Abholung.</p>
+        <p>Alle Preise inkl. 19 % MwSt., Stand September 2026. Kraftstoff nach Verbrauch, Kaution bei Abholung.</p>
       </div>
 
       <div class="price-grid">
@@ -655,9 +965,9 @@
   <section id="fahrzeug">
     <div class="wrap veh-grid">
       <div class="veh-media">
-        <img src="images/maxus2_thumb.png" alt="Laderaum und Ausstattung des Maxus Deliver 9"
-             loading="lazy"
-             onerror="this.onerror=null;this.src='images/maxus3_thumb.png';">
+        <img src="images/maxus-deliver-9.webp" width="1200" height="800"
+             alt="Maxus Deliver 9 mit Hochdach (L3H2), Miet-Transporter von westernrent in Oberhausen"
+             loading="lazy" decoding="async">
       </div>
       <div>
         <div class="sec-head" style="margin-bottom:0;">
@@ -742,6 +1052,33 @@
     </div>
   </section>
 
+  <!-- Fakten auf einen Blick (für Suchmaschinen und KI-Assistenten gut zitierbar) -->
+  <section id="fakten" style="padding-top:0;">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>westernrent auf einen Blick</h2>
+        <p>Die wichtigsten Fakten zur Transporter-Miete in Oberhausen, kompakt zusammengefasst.</p>
+      </div>
+      <div class="price-card facts-card">
+        <div class="p-rows">
+            <div class="p-row"><span class="lbl">Anbieter</span><span class="val">westernrent, Transporter-Vermietung der westernprint GmbH</span></div>
+            <div class="p-row"><span class="lbl">Standort</span><span class="val">Schenkendorfstraße 45, 46047 Oberhausen</span></div>
+            <div class="p-row"><span class="lbl">Fahrzeug</span><span class="val">Maxus Deliver 9, L3H2 Hochdach, 3,5 t, Diesel, 3 Sitzplätze</span></div>
+            <div class="p-row"><span class="lbl">Laderaum</span><span class="val">ca. 3,40 m Ladelänge, Stehhöhe</span></div>
+            <div class="p-row"><span class="lbl">Voraussetzungen</span><span class="val">Führerschein Klasse B seit mindestens 2 Jahren, ab 21 Jahren, Personalausweis</span></div>
+            <div class="p-row"><span class="lbl">Tagesmiete</span><span class="val">75 € Montag bis Donnerstag, 100 € Freitag bis Sonntag und Feiertage, jeweils inkl. 100 km</span></div>
+            <div class="p-row"><span class="lbl">Stundenmiete</span><span class="val">20 € Grundgebühr plus 10 €/Std. (Mo–Fr) oder 15 €/Std. (Sa–So), inkl. 100 km</span></div>
+            <div class="p-row"><span class="lbl">Mehrkilometer</span><span class="val">0,20 €/km mit Vorausbuchung, sonst 0,40 €/km</span></div>
+            <div class="p-row"><span class="lbl">Versicherung</span><span class="val">Vollkasko inklusive, Selbstbeteiligung 650 € (für 25 €/Tag auf 300 € reduzierbar)</span></div>
+            <div class="p-row"><span class="lbl">Kaution</span><span class="val">bei Abholung, bar oder mit Karte, keine Kreditkarte nötig</span></div>
+            <div class="p-row"><span class="lbl">Rechnung</span><span class="val">für Privat- und Firmenkunden</span></div>
+            <div class="p-row"><span class="lbl">Einzugsgebiet</span><span class="val">Oberhausen, Essen, Duisburg, Mülheim an der Ruhr, Bottrop</span></div>
+            <div class="p-row"><span class="lbl">Reservierung</span><span class="val">WhatsApp oder Anruf: 0177 1437576</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Einzugsgebiet (lokale Suchbegriffe) -->
   <section id="gebiet" style="padding-top:0;">
     <div class="wrap">
@@ -752,6 +1089,11 @@
           Lieferwagen für den Möbelkauf: Unser Standort an der Schenkendorfstraße liegt direkt
           an der A516 und ist aus Essen, Duisburg, Mülheim an der Ruhr und Bottrop in wenigen
           Minuten erreichbar. Abholung und Rückgabe nach Absprache, auch am Wochenende.
+        </p>
+        <p style="margin-top:10px;">
+          Typische Einsätze: Umzug und WG-Auszug, Möbel abholen, Sperrmüll und Entrümpelung,
+          Material für Handwerk und Baustelle, Kurier- und Lieferfahrten. Für Firmen gibt es
+          Wochen- und Monatsmiete mit Rechnung.
         </p>
       </div>
     </div>
@@ -765,24 +1107,52 @@
       </div>
       <div class="faq-list">
         <details class="faq">
-          <summary>Was brauche ich zum Mieten?</summary>
+          <summary>Was brauche ich, um einen Transporter zu mieten?</summary>
           <p>Personalausweis, Führerschein Klasse B (mindestens 2 Jahre) und Mindestalter 21 Jahre. Die Kaution zahlst du bei Abholung bar oder mit Karte.</p>
         </details>
         <details class="faq">
-          <summary>Wie kurzfristig kann ich mieten?</summary>
-          <p>Oft noch am selben Tag. Schreib einfach per WhatsApp, wir sagen dir sofort, ob der Wunschtermin frei ist.</p>
+          <summary>Brauche ich eine Kreditkarte?</summary>
+          <p>Nein. Die Kaution zahlst du bei Abholung bar oder mit Karte, eine Kreditkarte ist nicht nötig.</p>
+        </details>
+        <details class="faq">
+          <summary>Wie kurzfristig kann ich einen Transporter in Oberhausen mieten?</summary>
+          <p>Oft noch am selben Tag. Schreib einfach per WhatsApp an 0177 1437576, wir sagen dir sofort, ob der Wunschtermin frei ist.</p>
+        </details>
+        <details class="faq">
+          <summary>Was kostet ein Miet-Transporter pro Tag?</summary>
+          <p>Montag bis Donnerstag 75 € pro Tag, Freitag bis Sonntag und an Feiertagen 100 € pro Tag, jeweils inklusive 100 Freikilometer und Vollkasko.</p>
+        </details>
+        <details class="faq">
+          <summary>Was kostet die Stundenmiete?</summary>
+          <p>Einmalig 20 € Grundgebühr plus 10 € pro Stunde von Montag bis Freitag oder 15 € pro Stunde am Samstag und Sonntag, jeweils inklusive 100 km.</p>
         </details>
         <details class="faq">
           <summary>Was passiert, wenn ich mehr Kilometer fahre?</summary>
           <p>100 km pro Miettag sind inklusive. Buchst du weitere Kilometer im Voraus, kosten sie 0,20 € pro Kilometer. Ohne Vorbuchung 0,40 €.</p>
         </details>
         <details class="faq">
-          <summary>Ist das Fahrzeug versichert?</summary>
+          <summary>Wie groß ist der Laderaum?</summary>
+          <p>Der Maxus Deliver 9 in der Hochdach-Version L3H2 hat ca. 3,40 m Ladelänge und Stehhöhe im Laderaum. Eine komplette 2-Zimmer-Wohnung passt in eine Fuhre.</p>
+        </details>
+        <details class="faq">
+          <summary>Kann ich den Transporter auch am Wochenende mieten?</summary>
+          <p>Ja. Abholung und Rückgabe gehen nach Absprache auch samstags und sonntags. Freitag bis Sonntag kostet die Tagesmiete 100 € inklusive 100 km.</p>
+        </details>
+        <details class="faq">
+          <summary>Ist der Transporter versichert?</summary>
           <p>Ja, Vollkasko ist immer inklusive (Selbstbeteiligung 650 €). Gegen 25 € pro Tag senken wir die Selbstbeteiligung auf 300 €.</p>
         </details>
         <details class="faq">
+          <summary>Welchen Kraftstoff tankt der Transporter?</summary>
+          <p>Diesel. Den Kraftstoff zahlst du nach Verbrauch.</p>
+        </details>
+        <details class="faq">
+          <summary>Lohnt sich die Anfahrt aus Essen, Duisburg, Mülheim oder Bottrop?</summary>
+          <p>Ja. Der Standort an der Schenkendorfstraße 45 in Oberhausen liegt direkt an der A516 und ist aus Essen, Duisburg, Mülheim an der Ruhr und Bottrop in wenigen Minuten erreichbar.</p>
+        </details>
+        <details class="faq">
           <summary>Kann ich den Transporter auch länger mieten?</summary>
-          <p>Ja, für Wochen oder Monate machen wir dir ein individuelles Angebot. Besonders für Firmenkunden mit regelmäßigen Touren lohnt sich das.</p>
+          <p>Ja, für Wochen oder Monate gibt es ein individuelles Angebot mit Rechnung, besonders für Firmenkunden mit regelmäßigen Touren.</p>
         </details>
       </div>
     </div>
@@ -817,7 +1187,7 @@
 
   <footer>
     <div class="wrap footer-row">
-      <div>© <span id="y"></span> westernrent. Die Vermietung läuft über die westernprint GmbH, Oberhausen.</div>
+      <address class="nap">© <span id="y"></span> westernrent · Transporter-Vermietung der westernprint GmbH · Schenkendorfstraße 45, 46047 Oberhausen · <a href="tel:+491771437576">0177 1437576</a></address>
       <div style="display:flex; gap:18px; flex-wrap:wrap;">
         <a href="impressum.html">Impressum</a>
         <a href="datenschutz.html">Datenschutz</a>
